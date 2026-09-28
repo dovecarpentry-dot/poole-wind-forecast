@@ -1,1 +1,104 @@
-    Poole Harbour wing foil, wind, tide and surf forecast
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071827">
+<title>Poole Wind & Surf</title>
+<style>
+:root{--bg:#071827;--card:#10283a;--card2:#153449;--text:#f5fbff;--muted:#9fb4c4;--line:#23465d;--good:#25d07d;--maybe:#ffbd3e;--bad:#ff6371;--blue:#57b7ff}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(#071827,#0b2131);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:850px;margin:auto;padding:18px 14px 40px}.top{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:4px 2px 18px}
+h1{font-size:29px;margin:0}.sub{color:var(--muted);font-size:13px;margin-top:4px}.updated{text-align:right;color:var(--muted);font-size:12px}
+.hero{background:linear-gradient(135deg,#12344a,#0d293c);border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:15px}
+.heroRow{display:flex;justify-content:space-between;gap:14px;align-items:center}.badge{font-size:28px;font-weight:900;padding:10px 15px;border-radius:16px;background:var(--maybe);color:#071827}
+.hero h2{margin:0 0 5px;font-size:21px}.hero p{margin:0;color:var(--muted);line-height:1.4}
+.tabs{display:flex;gap:8px;overflow:auto;padding:1px 0 12px}.tab{white-space:nowrap;border:1px solid var(--line);background:#0d2536;color:var(--text);padding:10px 13px;border-radius:999px;font-weight:700}.tab.active{background:var(--blue);color:#062034;border-color:transparent}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:13px}.card h3{margin:0;font-size:20px}.spothead{display:flex;justify-content:space-between;gap:12px;align-items:center}.status{font-weight:900;padding:7px 10px;border-radius:11px;color:#071827}.go{background:var(--good)}.maybe{background:var(--maybe)}.no{background:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.metric{background:var(--card2);border-radius:14px;padding:11px 8px;text-align:center}.val{font-weight:850;font-size:19px}.lab{font-size:11px;color:var(--muted);margin-top:3px}
+.reason{margin-top:12px;color:#d6e5ee;font-size:14px;line-height:1.4}.hours{display:flex;gap:7px;overflow:auto;margin-top:13px;padding-bottom:3px}.hour{min-width:82px;background:#0b2232;border:1px solid var(--line);border-radius:13px;padding:9px;text-align:center}.hour b{display:block;margin:5px 0}.tiny{font-size:11px;color:var(--muted)}
+.notice{color:var(--muted);font-size:12px;line-height:1.45;padding:4px 4px 0}.error{background:#3b1e25;border:1px solid #743744;padding:12px;border-radius:14px;margin-bottom:12px}
+@media(max-width:520px){.grid{grid-template-columns:repeat(2,1fr)}.heroRow{align-items:flex-start}.badge{font-size:23px}h1{font-size:26px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="top"><div><h1>Poole Wind & Surf</h1><div class="sub">Wing foil + surf session finder</div></div><div class="updated" id="updated">Loading live forecast…</div></div>
+<section class="hero"><div class="heroRow"><div><h2 id="heroTitle">Checking conditions…</h2><p id="heroText">Comparing wind, gusts and swell around your local spots.</p></div><div class="badge" id="heroBadge">…</div></div></section>
+<div class="tabs" id="tabs"></div><div id="error"></div><div id="cards"></div>
+<p class="notice">Forecast data: Open‑Meteo weather and marine models. Wind is shown in knots. Marine/tide model data is indicative only and must not be used for navigation. Kimmeridge is treated as surf-only in this dashboard.</p>
+</main>
+<script>
+const spots=[
+ {id:"poole",name:"Poole Harbour",lat:50.704,lng:-1.985,type:"wing",windMin:14,windBest:18},
+ {id:"hamworthy",name:"Hamworthy",lat:50.716,lng:-2.020,type:"wing",windMin:14,windBest:18},
+ {id:"branksome",name:"Branksome",lat:50.704,lng:-1.924,type:"wingSurf",windMin:14,windBest:18,marine:true},
+ {id:"southbourne",name:"Southbourne",lat:50.719,lng:-1.799,type:"wingSurf",windMin:14,windBest:18,marine:true},
+ {id:"kimmeridge",name:"Kimmeridge",lat:50.611,lng:-2.127,type:"surf",marine:true}
+];
+let data={},active="all";
+const dir=d=>["N","NE","E","SE","S","SW","W","NW"][Math.round(d/45)%8];
+const safe=n=>Number.isFinite(n)?n:null;
+function score(s,w,g,wave,period){
+ if(s.type==="surf"){
+   if(wave==null)return ["MAYBE","Marine data unavailable"];
+   if(wave>=0.8 && period>=8)return ["GO",`${wave.toFixed(1)}m swell at ${Math.round(period)}s`];
+   if(wave>=0.5)return ["MAYBE",`${wave.toFixed(1)}m swell — worth checking`];
+   return ["NO",`${wave.toFixed(1)}m swell looks small`];
+ }
+ if(w==null)return ["MAYBE","Waiting for wind data"];
+ if(w>=s.windBest && g<=32)return ["GO",`${Math.round(w)}kt wind looks foilable`];
+ if(w>=s.windMin)return ["MAYBE",`${Math.round(w)}kt — marginal/depends on kit`];
+ return ["NO",`${Math.round(w)}kt is below the dashboard threshold`];
+}
+async function loadSpot(s){
+ const weather=`https://api.open-meteo.com/v1/forecast?latitude=${s.lat}&longitude=${s.lng}&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m&wind_speed_unit=kn&timezone=Europe%2FLondon&forecast_days=7`;
+ const jobs=[fetch(weather).then(r=>{if(!r.ok)throw Error("weather");return r.json()})];
+ if(s.marine){
+  const marine=`https://marine-api.open-meteo.com/v1/marine?latitude=${s.lat}&longitude=${s.lng}&hourly=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period,sea_level_height_msl&timezone=Europe%2FLondon&forecast_days=7&cell_selection=sea`;
+  jobs.push(fetch(marine).then(r=>r.ok?r.json():null).catch(()=>null));
+ }
+ const [w,m]=await Promise.all(jobs);
+ const now=new Date(), times=w.hourly.time.map(t=>new Date(t));
+ let i=times.findIndex(t=>t>=now); if(i<0)i=0;
+ let mi=0;
+ if(m?.hourly?.time){const mt=m.hourly.time.map(t=>new Date(t));mi=mt.findIndex(t=>t>=now);if(mi<0)mi=0}
+ const wave=safe(m?.hourly?.swell_wave_height?.[mi] ?? m?.hourly?.wave_height?.[mi]);
+ const period=safe(m?.hourly?.swell_wave_period?.[mi] ?? m?.hourly?.wave_period?.[mi]);
+ const wind=safe(w.hourly.wind_speed_10m[i]), gust=safe(w.hourly.wind_gusts_10m[i]), wd=safe(w.hourly.wind_direction_10m[i]);
+ const tide=safe(m?.hourly?.sea_level_height_msl?.[mi]);
+ return {s,w,m,i,mi,wind,gust,wd,wave,period,tide,status:score(s,wind,gust,wave,period)};
+}
+function hourBlocks(x){
+ let out="";
+ for(let k=x.i;k<Math.min(x.i+8,x.w.hourly.time.length);k+=2){
+  const t=new Date(x.w.hourly.time[k]);
+  out+=`<div class="hour"><span class="tiny">${t.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})}</span><b>${Math.round(x.w.hourly.wind_speed_10m[k])}kt</b><span class="tiny">${dir(x.w.hourly.wind_direction_10m[k])} · G${Math.round(x.w.hourly.wind_gusts_10m[k])}</span></div>`;
+ } return out;
+}
+function render(){
+ const arr=Object.values(data).filter(x=>active==="all"||x.s.id===active);
+ document.getElementById("cards").innerHTML=arr.map(x=>{
+  const [st,why]=x.status, cls=st==="GO"?"go":st==="NO"?"no":"maybe";
+  return `<section class="card"><div class="spothead"><h3>${x.s.name}</h3><span class="status ${cls}">${st}</span></div>
+  <div class="grid">
+   <div class="metric"><div class="val">${x.wind==null?"—":Math.round(x.wind)+" kt"}</div><div class="lab">WIND</div></div>
+   <div class="metric"><div class="val">${x.gust==null?"—":Math.round(x.gust)+" kt"}</div><div class="lab">GUST</div></div>
+   <div class="metric"><div class="val">${x.wd==null?"—":dir(x.wd)}</div><div class="lab">DIRECTION</div></div>
+   <div class="metric"><div class="val">${x.wave==null?"—":x.wave.toFixed(1)+" m"}</div><div class="lab">${x.s.type==="surf"?"SWELL":"SWELL"}</div></div>
+   ${x.s.marine?`<div class="metric"><div class="val">${x.period==null?"—":Math.round(x.period)+" s"}</div><div class="lab">PERIOD</div></div><div class="metric"><div class="val">${x.tide==null?"—":x.tide.toFixed(2)+" m"}</div><div class="lab">MODEL SEA LEVEL*</div></div>`:""}
+  </div><div class="reason">${why}</div><div class="hours">${hourBlocks(x)}</div></section>`;
+ }).join("");
+ const all=Object.values(data), gos=all.filter(x=>x.status[0]==="GO");
+ const badge=document.getElementById("heroBadge");
+ if(gos.length){badge.textContent="GO";badge.style.background="var(--good)";document.getElementById("heroTitle").textContent=`${gos[0].s.name} looks best right now`;document.getElementById("heroText").textContent=gos.map(x=>x.s.name).join(" · ");}
+ else if(all.length){badge.textContent="MAYBE";badge.style.background="var(--maybe)";document.getElementById("heroTitle").textContent="No clear GO right now";document.getElementById("heroText").textContent="Check the spot cards and upcoming hours below."}
+}
+document.getElementById("tabs").innerHTML=`<button class="tab active" data-id="all">All spots</button>`+spots.map(s=>`<button class="tab" data-id="${s.id}">${s.name}</button>`).join("");
+document.getElementById("tabs").onclick=e=>{if(!e.target.dataset.id)return;active=e.target.dataset.id;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.id===active));render()}
+Promise.allSettled(spots.map(async s=>{const x=await loadSpot(s);data[s.id]=x;render()})).then(res=>{
+ document.getElementById("updated").textContent="Updated "+new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+ const failed=res.filter(x=>x.status==="rejected").length;
+ if(failed)document.getElementById("error").innerHTML=`<div class="error">${failed} forecast feed${failed>1?"s":""} failed to load. Refresh to retry.</div>`;
+ render();
+});
+</script></body></html>
