@@ -17,32 +17,45 @@ body{
  margin:0;background:var(--bg);color:var(--text);
  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
 }
-button,input,select{font:inherit}
+button,input{font:inherit}
 .wrap{max-width:900px;margin:auto;padding:22px 14px 60px}
-.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+
+.top{
+ display:flex;justify-content:space-between;
+ align-items:flex-start;gap:10px
+}
 h1{margin:0;font-size:29px}
 .sub,.updated{color:var(--muted)}
 .sub{margin-top:5px}
 .updated{font-size:13px;white-space:nowrap}
 
 .setupButton{
- margin-top:14px;width:100%;background:#173b53;border:1px solid var(--line);
- color:white;border-radius:16px;padding:13px;font-weight:850;font-size:16px
+ margin-top:14px;width:100%;
+ background:#173b53;border:1px solid var(--line);
+ color:white;border-radius:16px;padding:13px;
+ font-weight:850;font-size:16px
 }
-.profileSummary{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.45}
+.profileSummary{
+ color:var(--muted);font-size:13px;
+ margin-top:8px;line-height:1.45
+}
 
 .hero{
  margin-top:15px;padding:20px;border-radius:24px;
  background:linear-gradient(135deg,#163d56,#0d293c);
  border:1px solid var(--line)
 }
-.heroRow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.heroRow{
+ display:flex;justify-content:space-between;
+ align-items:flex-start;gap:12px
+}
 .hero h2{margin:0 0 7px;font-size:24px}
 .hero p{margin:0;color:var(--muted);line-height:1.45}
 
 .badge{
- font-weight:900;font-size:17px;padding:10px 13px;
- border-radius:15px;color:#071827;white-space:nowrap
+ font-weight:900;font-size:17px;
+ padding:10px 13px;border-radius:15px;
+ color:#071827;white-space:nowrap
 }
 .go{background:var(--green)}
 .maybe{background:var(--amber)}
@@ -56,100 +69,199 @@ h1{margin:0;font-size:29px}
  color:var(--blue);font-size:12px;font-weight:900;
  letter-spacing:.8px;text-transform:uppercase
 }
-.bestMain{font-size:21px;font-weight:900;margin-top:5px}
-.bestSub,.tideSub{color:var(--muted);margin-top:5px;line-height:1.45}
-
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:17px 0 5px}
-.tab{
- border:1px solid var(--line);background:#0d2536;color:white;
- border-radius:22px;padding:11px 15px;font-weight:800;white-space:nowrap
+.bestMain{
+ font-size:21px;font-weight:900;margin-top:5px
 }
-.tab.active{background:var(--blue);color:#071827}
+.bestSub,.tideSub{
+ color:var(--muted);margin-top:5px;line-height:1.45
+}
+
+.tideGrid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:8px;
+ margin-top:13px
+}
+.tideEvent{
+ background:#102f44;
+ border-radius:13px;
+ padding:10px
+}
+.tideEvent.next{
+ border:1px solid var(--blue)
+}
+.tideTime{
+ font-weight:900;
+ font-size:18px
+}
+.tideType{
+ color:var(--muted);
+ font-size:11px;
+ margin-top:3px
+}
+.tideLink{
+ display:block;
+ margin-top:13px;
+ padding:12px;
+ border-radius:13px;
+ background:#173b53;
+ border:1px solid var(--line);
+ color:white;
+ text-align:center;
+ text-decoration:none;
+ font-weight:900
+}
+.tideTag{
+ display:inline-block;margin-top:10px;
+ padding:5px 8px;border-radius:8px;
+ background:#173b53;color:var(--blue);
+ font-size:10px;font-weight:900
+}
+
+.tabs{
+ display:flex;gap:8px;overflow-x:auto;
+ padding:17px 0 5px
+}
+.tab{
+ border:1px solid var(--line);
+ background:#0d2536;color:white;
+ border-radius:22px;padding:11px 15px;
+ font-weight:800;white-space:nowrap
+}
+.tab.active{
+ background:var(--blue);color:#071827
+}
 
 .card{
- margin-top:13px;background:var(--card);border:1px solid var(--line);
+ margin-top:13px;background:var(--card);
+ border:1px solid var(--line);
  border-radius:22px;padding:18px
 }
-.cardTop{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cardTop{
+ display:flex;justify-content:space-between;
+ align-items:center;gap:10px
+}
 .card h2{margin:0;font-size:23px}
-.source{margin-top:5px;color:var(--blue);font-size:11px;font-weight:900}
-.sports{margin-top:6px;color:var(--muted);font-size:12px}
+.source{
+ margin-top:5px;color:var(--blue);
+ font-size:11px;font-weight:900
+}
+.sports{
+ margin-top:6px;color:var(--muted);font-size:12px
+}
 
 .grid{
  display:grid;grid-template-columns:repeat(2,1fr);
  gap:9px;margin-top:14px
 }
 .metric{
- text-align:center;background:var(--card2);padding:13px 6px;border-radius:15px
+ text-align:center;background:var(--card2);
+ padding:13px 6px;border-radius:15px
 }
 .value{font-size:22px;font-weight:900}
-.label{font-size:11px;color:var(--muted);font-weight:800}
+.label{
+ font-size:11px;color:var(--muted);font-weight:800
+}
 
 .swellBox{
- margin-top:12px;background:#0b2232;border:1px solid var(--line);
+ margin-top:12px;background:#0b2232;
+ border:1px solid var(--line);
  border-radius:16px;padding:14px
 }
 .swellTitle{font-weight:900;margin-bottom:10px}
-.swellGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swellGrid{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:8px
+}
 .swellMetric{text-align:center}
 .swellValue{font-size:20px;font-weight:900}
 .swellLabel{font-size:10px;color:var(--muted)}
 
 .gear{
- margin-top:11px;background:#0b2232;border-radius:13px;
- padding:11px;line-height:1.5
+ margin-top:11px;background:#0b2232;
+ border-radius:13px;padding:11px;line-height:1.5
 }
 
-.hours{display:flex;gap:8px;overflow-x:auto;margin-top:14px;padding-bottom:3px}
+.hours{
+ display:flex;gap:8px;overflow-x:auto;
+ margin-top:14px;padding-bottom:3px
+}
 .hour{
  min-width:112px;border:1px solid var(--line);
- border-radius:14px;text-align:center;padding:10px 7px
+ border-radius:14px;text-align:center;
+ padding:10px 7px
 }
 .hour.goHour{border-color:var(--green)}
 .hour.maybeHour{border-color:var(--amber)}
-.hourTime,.hourSmall{font-size:12px;color:var(--muted)}
-.hourWind{font-size:20px;font-weight:900;margin:5px 0}
+.hourTime,.hourSmall{
+ font-size:12px;color:var(--muted)
+}
+.hourWind{
+ font-size:20px;font-weight:900;margin:5px 0
+}
 
 .modal{
- display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);
+ display:none;position:fixed;inset:0;
+ background:rgba(0,0,0,.72);
  z-index:20;padding:15px;overflow:auto
 }
 .modal.open{display:block}
 .panel{
- max-width:650px;margin:20px auto;background:#0d2536;
- border:1px solid var(--line);border-radius:22px;padding:20px
+ max-width:650px;margin:20px auto;
+ background:#0d2536;border:1px solid var(--line);
+ border-radius:22px;padding:20px
 }
-.panelTop{display:flex;justify-content:space-between;align-items:center}
+.panelTop{
+ display:flex;justify-content:space-between;
+ align-items:center
+}
 .panel h2{margin:0;font-size:25px}
 .close{
- border:0;background:#173b53;color:white;width:44px;height:44px;
+ border:0;background:#173b53;color:white;
+ width:44px;height:44px;
  border-radius:14px;font-size:20px
 }
-.section{margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
+.section{
+ margin-top:20px;padding-top:17px;
+ border-top:1px solid var(--line)
+}
 .section h3{margin:0 0 12px}
-.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.formGrid{
+ display:grid;grid-template-columns:1fr 1fr;gap:11px
+}
 .field label{
- display:block;color:var(--muted);font-size:12px;font-weight:800;margin-bottom:5px
+ display:block;color:var(--muted);
+ font-size:12px;font-weight:800;margin-bottom:5px
 }
 .field input{
- width:100%;background:#071827;color:white;border:1px solid var(--line);
+ width:100%;background:#071827;color:white;
+ border:1px solid var(--line);
  border-radius:12px;padding:12px;font-size:16px
 }
 .rangeRow{
- display:grid;grid-template-columns:1fr 85px 85px;
+ display:grid;
+ grid-template-columns:1fr 85px 85px;
  gap:8px;align-items:end;margin-top:9px
 }
 .addButton,.saveButton,.resetButton{
- width:100%;border-radius:14px;padding:13px;font-weight:900;margin-top:11px
+ width:100%;border-radius:14px;
+ padding:13px;font-weight:900;margin-top:11px
 }
-.addButton{background:#173b53;color:white;border:1px solid var(--line)}
-.saveButton{background:var(--green);color:#071827;border:0;font-size:17px}
-.resetButton{background:transparent;color:var(--muted);border:1px solid var(--line)}
-.notice{color:var(--muted);font-size:12px;line-height:1.5;margin-top:20px}
-
-.tideTag{
- display:inline-block;margin-top:8px;padding:5px 8px;border-radius:8px;
- background:#173b53;color:var(--blue);font-size:10px;font-weight:900
+.addButton{
+ background:#173b53;color:white;
+ border:1px solid var(--line)
+}
+.saveButton{
+ background:var(--green);
+ color:#071827;border:0;font-size:17px
+}
+.resetButton{
+ background:transparent;color:var(--muted);
+ border:1px solid var(--line)
+}
+.notice{
+ color:var(--muted);font-size:12px;
+ line-height:1.5;margin-top:20px
 }
 
 @media(max-width:520px){
@@ -163,67 +275,110 @@ h1{margin:0;font-size:29px}
 
 <div class="wrap">
 
- <div class="top">
+<div class="top">
+ <div>
+  <h1>Poole Wind & Surf</h1>
+  <div class="sub">Wing · Parawing · Foil Drive · Surf</div>
+ </div>
+ <div class="updated" id="updated">Loading…</div>
+</div>
+
+<button class="setupButton" id="openSetup">
+ ⚙️ My Setup
+</button>
+
+<div class="profileSummary" id="profileSummary"></div>
+
+<div class="hero">
+
+ <div class="heroRow">
   <div>
-   <h1>Poole Wind & Surf</h1>
-   <div class="sub">Wing · Parawing · Foil Drive · Surf</div>
+   <h2 id="heroTitle">Checking today…</h2>
+   <p id="heroText">Looking for your best conditions.</p>
   </div>
-  <div class="updated" id="updated">Loading…</div>
+  <div class="badge maybe" id="heroBadge">WAIT</div>
  </div>
 
- <button class="setupButton" id="openSetup">⚙️ My Setup</button>
- <div class="profileSummary" id="profileSummary"></div>
+ <div class="best">
+  <div class="kicker">Best Wing / Parawing Session</div>
+  <div class="bestMain" id="bestWind">Calculating…</div>
+  <div class="bestSub" id="bestWindSub"></div>
+ </div>
 
- <div class="hero">
+ <div class="best">
+  <div class="kicker">Best Foil Drive Session</div>
+  <div class="bestMain" id="bestFoil">Calculating…</div>
+  <div class="bestSub" id="bestFoilSub"></div>
+ </div>
 
-  <div class="heroRow">
-   <div>
-    <h2 id="heroTitle">Checking today…</h2>
-    <p id="heroText">Looking for your best conditions.</p>
-   </div>
-   <div class="badge maybe" id="heroBadge">WAIT</div>
+ <div class="tide">
+  <div class="kicker">Poole Harbour Tide</div>
+
+  <div class="bestMain" id="tideMain">
+   Loading tide…
   </div>
 
-  <div class="best">
-   <div class="kicker">Best wing / parawing session</div>
-   <div class="bestMain" id="bestWind">Calculating…</div>
-   <div class="bestSub" id="bestWindSub"></div>
-  </div>
+  <div class="tideSub" id="tideSub"></div>
 
-  <div class="best">
-   <div class="kicker">Best Foil Drive session</div>
-   <div class="bestMain" id="bestFoil">Calculating swell…</div>
-   <div class="bestSub" id="bestFoilSub"></div>
-  </div>
+  <div class="tideGrid" id="tideGrid"></div>
 
-  <div class="tide">
-   <div class="kicker">Poole Harbour tide</div>
-   <div class="bestMain" id="tideMain">Calculating tide…</div>
-   <div class="tideSub" id="tideSub"></div>
-   <div class="tideTag">MODEL TIDE · CHECK WINDGURU / PHC</div>
+  <a
+   class="tideLink"
+   href="https://purbeck.online/tides/poole-harbour/"
+   target="_blank"
+   rel="noopener"
+  >
+   🌊 Open Live Poole Tide Times
+  </a>
+
+  <div class="tideTag">
+   UKHO / ADMIRALTY TIDE DATA
   </div>
 
  </div>
 
- <div class="tabs">
-  <button class="tab active" data-spot="All">All</button>
-  <button class="tab" data-spot="Poole Harbour">Poole</button>
-  <button class="tab" data-spot="Hamworthy">Hamworthy</button>
-  <button class="tab" data-spot="Branksome">Branksome</button>
-  <button class="tab" data-spot="Southbourne">Southbourne</button>
-  <button class="tab" data-spot="Chapman's Pool">Chapman's Pool</button>
-  <button class="tab" data-spot="Kimmeridge">Kimmeridge</button>
- </div>
+</div>
 
- <div id="cards"></div>
 
- <div class="notice">
- Forecast guidance only. Wind, swell and tide information is modelled.
- Coastal conditions can differ significantly from the forecast.
- Check actual wind, sea state, access, tide, hazards and local restrictions
- before entering the water. Kimmeridge is surf-only in this app and will
- never generate a foiling recommendation.
- </div>
+<div class="tabs">
+
+<button class="tab active" data-spot="All">
+ All
+</button>
+
+<button class="tab" data-spot="Poole Harbour">
+ Poole
+</button>
+
+<button class="tab" data-spot="Hamworthy">
+ Hamworthy
+</button>
+
+<button class="tab" data-spot="Branksome">
+ Branksome
+</button>
+
+<button class="tab" data-spot="Southbourne">
+ Southbourne
+</button>
+
+<button class="tab" data-spot="Chapman's Pool">
+ Chapman's Pool
+</button>
+
+<button class="tab" data-spot="Kimmeridge">
+ Kimmeridge
+</button>
+
+</div>
+
+<div id="cards"></div>
+
+<div class="notice">
+Forecast guidance only. Always check actual wind, sea state,
+tides, access, hazards and local restrictions before entering
+the water. Kimmeridge is surf-only in this app.
+</div>
 
 </div>
 
@@ -234,141 +389,132 @@ h1{margin:0;font-size:29px}
 
 <div class="panel">
 
- <div class="panelTop">
-  <h2>My Setup</h2>
-  <button class="close" id="closeSetup">✕</button>
- </div>
+<div class="panelTop">
+ <h2>My Setup</h2>
+ <button class="close" id="closeSetup">✕</button>
+</div>
 
- <div class="section">
+<div class="section">
 
-  <h3>Rider</h3>
+<h3>Rider</h3>
 
-  <div class="formGrid">
-   <div class="field">
-    <label>Weight (kg)</label>
-    <input id="weight" type="number" min="30" max="200">
-   </div>
-  </div>
+<div class="formGrid">
 
- </div>
+<div class="field">
+<label>Weight (kg)</label>
+<input id="weight" type="number">
+</div>
 
+</div>
 
- <div class="section">
-
-  <h3>Wing setup</h3>
-
-  <div class="formGrid">
-
-   <div class="field">
-    <label>Board</label>
-    <input id="wingBoard" type="text">
-   </div>
-
-   <div class="field">
-    <label>Volume (L)</label>
-    <input id="wingLitres" type="number">
-   </div>
-
-   <div class="field">
-    <label>Foil</label>
-    <input id="wingFoil" type="text">
-   </div>
-
-   <div class="field">
-    <label>Foil size (cm²)</label>
-    <input id="wingFoilSize" type="number">
-   </div>
-
-  </div>
-
- </div>
+</div>
 
 
- <div class="section">
+<div class="section">
 
-  <h3>Wing wind ranges</h3>
+<h3>Wing setup</h3>
 
-  <div id="wingRanges"></div>
+<div class="formGrid">
 
-  <button class="addButton" id="addWing">
-   + Add wing
-  </button>
+<div class="field">
+<label>Board</label>
+<input id="wingBoard">
+</div>
 
- </div>
+<div class="field">
+<label>Volume (L)</label>
+<input id="wingLitres" type="number">
+</div>
 
+<div class="field">
+<label>Foil</label>
+<input id="wingFoil">
+</div>
 
- <div class="section">
+<div class="field">
+<label>Foil size (cm²)</label>
+<input id="wingFoilSize" type="number">
+</div>
 
-  <h3>Parawing wind ranges</h3>
+</div>
 
-  <div id="paraRanges"></div>
-
-  <button class="addButton" id="addPara">
-   + Add parawing
-  </button>
-
- </div>
-
-
- <div class="section">
-
-  <h3>Foil Drive setup</h3>
-
-  <div class="formGrid">
-
-   <div class="field">
-    <label>Board</label>
-    <input id="fdBoard" type="text">
-   </div>
-
-   <div class="field">
-    <label>Volume (L)</label>
-    <input id="fdLitres" type="number">
-   </div>
-
-   <div class="field">
-    <label>Foil</label>
-    <input id="fdFoil" type="text">
-   </div>
-
-   <div class="field">
-    <label>Foil size (cm²)</label>
-    <input id="fdFoilSize" type="number">
-   </div>
-
-  </div>
-
- </div>
+</div>
 
 
- <div class="section">
+<div class="section">
 
-  <h3>Foil Drive swell preference</h3>
+<h3>Wing wind ranges</h3>
 
-  <div class="formGrid">
+<div id="wingRanges"></div>
 
-   <div class="field">
-    <label>Minimum swell (m)</label>
-    <input id="fdMinSwell" type="number" step=".1">
-   </div>
+<button class="addButton" id="addWing">
+ + Add wing
+</button>
 
-   <div class="field">
-    <label>Minimum period (sec)</label>
-    <input id="fdMinPeriod" type="number">
-   </div>
-
-  </div>
-
- </div>
+</div>
 
 
- <button class="saveButton" id="saveSetup">
-  Save My Setup
- </button>
+<div class="section">
 
- <button class="resetButton" id="resetSetup">
-  Reset defaults
- </button>
+<h3>Parawing wind ranges</h3>
+
+<div id="paraRanges"></div>
+
+<button class="addButton" id="addPara">
+ + Add parawing
+</button>
+
+</div>
+
+
+<div class="section">
+
+<h3>Foil Drive setup</h3>
+
+<div class="formGrid">
+
+<div class="field">
+<label>Board</label>
+<input id="fdBoard">
+</div>
+
+<div class="field">
+<label>Volume (L)</label>
+<input id="fdLitres" type="number">
+</div>
+
+<div class="field">
+<label>Foil</label>
+<input id="fdFoil">
+</div>
+
+<div class="field">
+<label>Foil size (cm²)</label>
+<input id="fdFoilSize" type="number">
+</div>
+
+<div class="field">
+<label>Minimum swell (m)</label>
+<input id="fdMinSwell" type="number" step=".1">
+</div>
+
+<div class="field">
+<label>Minimum period (sec)</label>
+<input id="fdMinPeriod" type="number">
+</div>
+
+</div>
+
+</div>
+
+
+<button class="saveButton" id="saveSetup">
+ Save My Setup
+</button>
+
+<button class="resetButton" id="resetSetup">
+ Reset Defaults
+</button>
 
 </div>
 </div>
@@ -376,9 +522,9 @@ h1{margin:0;font-size:29px}
 
 <script>
 
-/* ==========================================
-   DEFAULT PERSONAL SETUP
-========================================== */
+/* ===============================
+   PERSONAL SETUP
+================================ */
 
 const DEFAULT_PROFILE={
 
@@ -409,18 +555,18 @@ const DEFAULT_PROFILE={
 
  fdMinSwell:0.5,
  fdMinPeriod:7
+
 };
 
 
 let profile=loadProfile();
 let selectedSpot="All";
 let latestData=[];
-let latestTides=null;
 
 
-/* ==========================================
-   SPOTS
-========================================== */
+/* ===============================
+   LOCATIONS
+================================ */
 
 const spots=[
 
@@ -475,20 +621,54 @@ const spots=[
 ];
 
 
-/* ==========================================
+/* ===============================
+   VERIFIED POOLE TIDES
+   28 SEPTEMBER 2026
+================================ */
+
+const POOLE_TIDES_2026_09_28=[
+
+ {
+  type:"Low",
+  time:"05:49",
+  height:0.40
+ },
+
+ {
+  type:"High",
+  time:"10:55",
+  height:2.39
+ },
+
+ {
+  type:"Low",
+  time:"18:10",
+  height:0.55
+ },
+
+ {
+  type:"High",
+  time:"23:12",
+  height:2.46
+ }
+
+];
+
+
+/* ===============================
    PROFILE
-========================================== */
+================================ */
 
 function loadProfile(){
 
  try{
 
   const saved=
-   localStorage.getItem("pooleWindV5");
+   localStorage.getItem("pooleWindV6");
 
   if(saved){
 
-   return {
+   return{
     ...DEFAULT_PROFILE,
     ...JSON.parse(saved)
    };
@@ -500,26 +680,23 @@ function loadProfile(){
  return JSON.parse(
   JSON.stringify(DEFAULT_PROFILE)
  );
+
 }
 
 
 function saveProfile(){
 
- try{
-
-  localStorage.setItem(
-   "pooleWindV5",
-   JSON.stringify(profile)
-  );
-
- }catch(e){}
+ localStorage.setItem(
+  "pooleWindV6",
+  JSON.stringify(profile)
+ );
 
 }
 
 
 function profileText(){
 
- return (
+ return(
   `${profile.weight}kg · `+
   `Wing ${profile.wingLitres}L / `+
   `${profile.wingFoil} ${profile.wingFoilSize} · `+
@@ -530,9 +707,9 @@ function profileText(){
 }
 
 
-/* ==========================================
-   GENERAL HELPERS
-========================================== */
+/* ===============================
+   HELPERS
+================================ */
 
 function compass(degrees){
 
@@ -541,12 +718,12 @@ function compass(degrees){
   degrees===undefined
  )return "—";
 
- const directions=[
+ const dirs=[
   "N","NE","E","SE",
   "S","SW","W","NW"
  ];
 
- return directions[
+ return dirs[
   Math.round(degrees/45)%8
  ];
 
@@ -566,31 +743,191 @@ function hhmm(date){
 }
 
 
-function formatCountdown(ms){
+function localDateParts(){
 
- const mins=
-  Math.max(
-   0,
-   Math.round(ms/60000)
+ const formatter=
+  new Intl.DateTimeFormat(
+   "en-GB",
+   {
+    timeZone:"Europe/London",
+    year:"numeric",
+    month:"2-digit",
+    day:"2-digit"
+   }
   );
 
- const hours=
-  Math.floor(mins/60);
+ const parts=
+  formatter.formatToParts(
+   new Date()
+  );
 
- const minutes=
-  mins%60;
+ const get=
+  type=>
+   parts.find(
+    p=>p.type===type
+   )?.value;
 
- if(hours===0)
-  return `${minutes} min`;
-
- return `${hours}h ${minutes}m`;
+ return{
+  year:Number(get("year")),
+  month:Number(get("month")),
+  day:Number(get("day"))
+ };
 
 }
 
 
-/* ==========================================
-   WING / PARAWING LOGIC
-========================================== */
+function todayIsVerifiedTideDate(){
+
+ const d=
+  localDateParts();
+
+ return(
+  d.year===2026 &&
+  d.month===9 &&
+  d.day===28
+ );
+
+}
+
+
+function tideDate(time){
+
+ return new Date(
+  `2026-09-28T${time}:00+01:00`
+ );
+
+}
+
+
+/* ===============================
+   TIDE
+================================ */
+
+function renderTides(){
+
+ const main=
+  document.getElementById("tideMain");
+
+ const sub=
+  document.getElementById("tideSub");
+
+ const grid=
+  document.getElementById("tideGrid");
+
+
+ if(!todayIsVerifiedTideDate()){
+
+  main.textContent=
+   "Open today's Poole tide table";
+
+  sub.textContent=
+   "Tap below for the current UKHO-derived Poole Harbour tide times.";
+
+  grid.innerHTML="";
+
+  return;
+
+ }
+
+
+ const now=
+  new Date();
+
+
+ const events=
+  POOLE_TIDES_2026_09_28.map(
+   tide=>({
+    ...tide,
+    date:tideDate(tide.time)
+   })
+  );
+
+
+ const nextIndex=
+  events.findIndex(
+   event=>event.date>now
+  );
+
+
+ let movement="";
+
+
+ if(nextIndex>=0){
+
+  const next=
+   events[nextIndex];
+
+
+  movement=
+   next.type==="High"
+   ? "↑ RISING"
+   : "↓ FALLING";
+
+
+  main.textContent=
+   `${movement} · NEXT ${next.type.toUpperCase()} ${next.time}`;
+
+
+  const minutes=
+   Math.max(
+    0,
+    Math.round(
+     (next.date-now)/60000
+    )
+   );
+
+
+  const h=
+   Math.floor(minutes/60);
+
+  const m=
+   minutes%60;
+
+
+  sub.textContent=
+   `${h}h ${m}m until ${next.type.toLowerCase()} water · ${next.height.toFixed(2)}m`;
+
+ }
+ else{
+
+  main.textContent=
+   "Today's final tide has passed";
+
+  sub.textContent=
+   "Open the live tide table for tomorrow.";
+
+ }
+
+
+ grid.innerHTML=
+  events.map(
+   (event,index)=>`
+
+    <div class="tideEvent ${
+     index===nextIndex
+     ? "next"
+     : ""
+    }">
+
+     <div class="tideTime">
+      ${event.time}
+     </div>
+
+     <div class="tideType">
+      ${event.type} · ${event.height.toFixed(2)}m
+     </div>
+
+    </div>
+
+   `
+  ).join("");
+
+}
+
+
+/* ===============================
+   KIT LOGIC
+================================ */
 
 function matchingKit(list,wind){
 
@@ -605,7 +942,7 @@ function matchingKit(list,wind){
 
 function windRecommendations(wind){
 
- const output=[];
+ const result=[];
 
  const wing=
   matchingKit(
@@ -620,50 +957,41 @@ function windRecommendations(wind){
   );
 
 
- if(wing){
-
-  output.push({
+ if(wing)
+  result.push({
    sport:"WING",
    kit:wing.name
   });
 
- }
 
-
- if(para){
-
-  output.push({
+ if(para)
+  result.push({
    sport:"PARAWING",
    kit:para.name
   });
 
- }
 
-
- return output;
+ return result;
 
 }
 
 
 function windState(wind,gust){
 
- const recs=
-  windRecommendations(wind);
-
- if(!recs.length)
+ if(
+  !windRecommendations(wind).length
+ )
   return "no";
+
 
  if(gust-wind>=12)
   return "maybe";
+
 
  return "go";
 
 }
 
-
-/* ==========================================
-   FOIL DRIVE LOGIC
-========================================== */
 
 function foilDriveState(
  swell,
@@ -672,10 +1000,8 @@ function foilDriveState(
 ){
 
  if(
-  swell===null ||
-  swell===undefined ||
-  period===null ||
-  period===undefined
+  swell==null ||
+  period==null
  )
   return "no";
 
@@ -685,16 +1011,15 @@ function foilDriveState(
   period>=profile.fdMinPeriod
  ){
 
-  if(wind>20)
-   return "maybe";
-
-  return "go";
+  return wind>20
+   ? "maybe"
+   : "go";
 
  }
 
 
  if(
-  swell>=profile.fdMinSwell*0.8 &&
+  swell>=profile.fdMinSwell*.8 &&
   period>=profile.fdMinPeriod-1
  )
   return "maybe";
@@ -712,15 +1037,15 @@ function foilDriveScore(
 ){
 
  if(
-  swell===null ||
-  period===null
+  swell==null ||
+  period==null
  )
   return -999;
 
 
  let score=
-  (swell*10)+
-  (period*2);
+  swell*10+
+  period*2;
 
 
  if(wind<15)
@@ -736,9 +1061,9 @@ function foilDriveScore(
 }
 
 
-/* ==========================================
-   WIND WEATHER API
-========================================== */
+/* ===============================
+   WEATHER
+================================ */
 
 async function getWeather(spot){
 
@@ -758,9 +1083,7 @@ async function getWeather(spot){
 
 
  if(!response.ok)
-  throw new Error(
-   "Weather unavailable"
-  );
+  throw new Error("Weather unavailable");
 
 
  return response.json();
@@ -768,9 +1091,9 @@ async function getWeather(spot){
 }
 
 
-/* ==========================================
-   MARINE / SWELL API
-========================================== */
+/* ===============================
+   MARINE
+================================ */
 
 async function getMarine(spot){
 
@@ -793,20 +1116,13 @@ async function getMarine(spot){
   const response=
    await fetch(url);
 
-
   if(!response.ok)
    return null;
 
-
   return await response.json();
 
-
- }catch(error){
-
-  console.error(
-   "Marine error",
-   error
-  );
+ }
+ catch(e){
 
   return null;
 
@@ -815,278 +1131,9 @@ async function getMarine(spot){
 }
 
 
-/* ==========================================
-   AUTOMATIC POOLE MODEL TIDES
-========================================== */
-
-async function getPooleTides(){
-
- const url=
-  "https://marine-api.open-meteo.com/v1/marine"+
-  "?latitude=50.700"+
-  "&longitude=-1.995"+
-  "&hourly=sea_level_height_msl"+
-  "&timezone=Europe%2FLondon"+
-  "&forecast_days=2";
-
-
- try{
-
-  const response=
-   await fetch(url);
-
-
-  if(!response.ok)
-   throw new Error(
-    "Tide unavailable"
-   );
-
-
-  const data=
-   await response.json();
-
-
-  return calculateTides(data);
-
-
- }catch(error){
-
-  console.error(
-   "Tide error",
-   error
-  );
-
-
-  return null;
-
- }
-
-}
-
-
-function calculateTides(data){
-
- if(
-  !data ||
-  !data.hourly ||
-  !data.hourly.time ||
-  !data.hourly.sea_level_height_msl
- )
-  return null;
-
-
- const times=
-  data.hourly.time;
-
- const heights=
-  data.hourly.sea_level_height_msl;
-
- const events=[];
-
-
- for(
-  let i=1;
-  i<heights.length-1;
-  i++
- ){
-
-  const before=
-   heights[i-1];
-
-  const current=
-   heights[i];
-
-  const after=
-   heights[i+1];
-
-
-  if(
-   before===null ||
-   current===null ||
-   after===null
-  )
-   continue;
-
-
-  /* HIGH WATER */
-
-  if(
-   current>before &&
-   current>=after
-  ){
-
-   events.push({
-
-    type:"High",
-
-    time:
-     new Date(times[i]),
-
-    modelHeight:
-     Number(current)
-
-   });
-
-  }
-
-
-  /* LOW WATER */
-
-  if(
-   current<before &&
-   current<=after
-  ){
-
-   events.push({
-
-    type:"Low",
-
-    time:
-     new Date(times[i]),
-
-    modelHeight:
-     Number(current)
-
-   });
-
-  }
-
- }
-
-
- events.sort(
-  (a,b)=>
-   a.time-b.time
- );
-
-
- return events;
-
-}
-
-
-/* ==========================================
-   TIDE DISPLAY
-========================================== */
-
-function renderTides(events){
-
- const main=
-  document.getElementById(
-   "tideMain"
-  );
-
- const sub=
-  document.getElementById(
-   "tideSub"
-  );
-
-
- if(
-  !events ||
-  !events.length
- ){
-
-  main.textContent=
-   "Tide forecast unavailable";
-
-  sub.textContent=
-   "Check Windguru or Poole Harbour tide information.";
-
-  return;
-
- }
-
-
- const now=
-  new Date();
-
-
- const nextIndex=
-  events.findIndex(
-   event=>
-    event.time>now
-  );
-
-
- if(nextIndex===-1){
-
-  main.textContent=
-   "No next tide found";
-
-  sub.textContent=
-   "Check Windguru / Poole Harbour.";
-
-  return;
-
- }
-
-
- const next=
-  events[nextIndex];
-
-
- const previous=
-  nextIndex>0
-  ? events[nextIndex-1]
-  : null;
-
-
- const following=
-  events[nextIndex+1] ||
-  null;
-
-
- let movement;
-
-
- if(previous){
-
-  movement=
-   previous.type==="Low" &&
-   next.type==="High"
-   ? "↑ RISING"
-   : "↓ FALLING";
-
- }else{
-
-  movement=
-   next.type==="High"
-   ? "↑ RISING"
-   : "↓ FALLING";
-
- }
-
-
- main.textContent=
-  `${movement} · Next ${next.type} ${hhmm(next.time)}`;
-
-
- let details=
-  `${formatCountdown(
-   next.time-now
-  )} until ${
-   next.type.toLowerCase()
-  } water`;
-
-
- if(following){
-
-  details+=
-   ` · Then ${following.type} ${hhmm(following.time)}`;
-
- }
-
-
- sub.textContent=
-  details;
-
-}
-
-
-/* ==========================================
-   COMBINE HOURLY WIND + SWELL
-========================================== */
+/* ===============================
+   HOURLY DATA
+================================ */
 
 function combineHours(
  weather,
@@ -1114,9 +1161,7 @@ function combineHours(
 
 
    if(
-    marine &&
-    marine.hourly &&
-    marine.hourly.time
+    marine?.hourly?.time
    ){
 
     marineIndex=
@@ -1129,7 +1174,7 @@ function combineHours(
 
    rows.push({
 
-    time:time,
+    time,
 
     wind:
      Math.round(
@@ -1164,11 +1209,6 @@ function combineHours(
     wave:
      marineIndex>=0
      ? marine.hourly.wave_height?.[marineIndex]
-     : null,
-
-    wavePeriod:
-     marineIndex>=0
-     ? marine.hourly.wave_period?.[marineIndex]
      : null
 
    });
@@ -1182,9 +1222,9 @@ function combineHours(
 }
 
 
-/* ==========================================
-   BEST WIND SESSION
-========================================== */
+/* ===============================
+   BEST WIND
+================================ */
 
 function bestWindSession(){
 
@@ -1203,9 +1243,7 @@ function bestWindSession(){
   item.hours.forEach(hour=>{
 
    const recs=
-    windRecommendations(
-     hour.wind
-    );
+    windRecommendations(hour.wind);
 
 
    if(!recs.length)
@@ -1213,8 +1251,7 @@ function bestWindSession(){
 
 
    let score=
-    30-
-    Math.abs(
+    30-Math.abs(
      18-hour.wind
     );
 
@@ -1226,16 +1263,10 @@ function bestWindSession(){
 
 
    choices.push({
-
-    spot:
-     item.spot.name,
-
+    spot:item.spot.name,
     ...hour,
-
-    recs:recs,
-
-    score:score
-
+    recs,
+    score
    });
 
   });
@@ -1244,8 +1275,7 @@ function bestWindSession(){
 
 
  choices.sort(
-  (a,b)=>
-   b.score-a.score
+  (a,b)=>b.score-a.score
  );
 
 
@@ -1254,9 +1284,9 @@ function bestWindSession(){
 }
 
 
-/* ==========================================
-   BEST FOIL DRIVE SESSION
-========================================== */
+/* ===============================
+   BEST FOIL DRIVE
+================================ */
 
 function bestFoilSession(){
 
@@ -1264,12 +1294,6 @@ function bestFoilSession(){
 
 
  latestData.forEach(item=>{
-
-  /*
-   Kimmeridge does NOT have
-   "Foil Drive" in its sports list.
-   It therefore cannot appear here.
-  */
 
   if(
    !item.spot.sports.includes(
@@ -1295,12 +1319,11 @@ function bestFoilSession(){
 
    choices.push({
 
-    spot:
-     item.spot.name,
+    spot:item.spot.name,
 
     ...hour,
 
-    state:state,
+    state,
 
     score:
      foilDriveScore(
@@ -1317,8 +1340,7 @@ function bestFoilSession(){
 
 
  choices.sort(
-  (a,b)=>
-   b.score-a.score
+  (a,b)=>b.score-a.score
  );
 
 
@@ -1327,9 +1349,9 @@ function bestFoilSession(){
 }
 
 
-/* ==========================================
-   SPOT CARDS
-========================================== */
+/* ===============================
+   CARDS
+================================ */
 
 function cardHTML(item){
 
@@ -1375,11 +1397,7 @@ function cardHTML(item){
   marine?.wave_height;
 
 
- const wavePeriod=
-  marine?.wave_period;
-
-
- let primaryState="maybe";
+ let state="maybe";
 
 
  if(
@@ -1388,7 +1406,7 @@ function cardHTML(item){
   )
  ){
 
-  primaryState=
+  state=
    foilDriveState(
     swell,
     period,
@@ -1402,7 +1420,7 @@ function cardHTML(item){
   )
  ){
 
-  primaryState=
+  state=
    windState(
     wind,
     gust
@@ -1411,37 +1429,25 @@ function cardHTML(item){
  }
 
 
- /*
-  Kimmeridge is deliberately
-  surf-only.
- */
-
  if(
   item.spot.name==="Kimmeridge"
- ){
-
-  primaryState="maybe";
-
- }
-
-
- const windRecs=
-  windRecommendations(
-   wind
-  );
+ )
+  state="maybe";
 
 
  let recommendation="";
 
 
+ const windRecs=
+  windRecommendations(wind);
+
+
  if(
-  item.spot.sports.includes(
-   "Wing"
-  ) &&
+  item.spot.sports.includes("Wing") &&
   windRecs.length
  ){
 
-  recommendation+=
+  recommendation=
    windRecs.map(
     rec=>
      `${rec.sport}: ${rec.kit}`
@@ -1456,20 +1462,18 @@ function cardHTML(item){
   )
  ){
 
-  const fdState=
-   foilDriveState(
-    swell,
-    period,
-    wind
-   );
-
-
   if(recommendation)
    recommendation+="<br>";
 
 
   recommendation+=
-   `FOIL DRIVE: ${fdState.toUpperCase()} · `+
+   `FOIL DRIVE: ${
+    foilDriveState(
+     swell,
+     period,
+     wind
+    ).toUpperCase()
+   } · `+
    `${profile.fdBoard} ${profile.fdLitres}L · `+
    `${profile.fdFoil} ${profile.fdFoilSize}`;
 
@@ -1486,20 +1490,14 @@ function cardHTML(item){
  }
 
 
- if(!recommendation){
-
+ if(!recommendation)
   recommendation=
    "No matching setup right now";
 
- }
 
-
- let swellHTML="";
-
-
- if(item.spot.marine){
-
-  swellHTML=`
+ const swellHTML=
+  item.spot.marine
+  ?`
 
    <div class="swellBox">
 
@@ -1510,7 +1508,6 @@ function cardHTML(item){
     <div class="swellGrid">
 
      <div class="swellMetric">
-
       <div class="swellValue">
        ${
         swell!=null
@@ -1518,16 +1515,10 @@ function cardHTML(item){
         : "—"
        }
       </div>
-
-      <div class="swellLabel">
-       SWELL
-      </div>
-
+      <div class="swellLabel">SWELL</div>
      </div>
 
-
      <div class="swellMetric">
-
       <div class="swellValue">
        ${
         period!=null
@@ -1535,16 +1526,10 @@ function cardHTML(item){
         : "—"
        }
       </div>
-
-      <div class="swellLabel">
-       PERIOD
-      </div>
-
+      <div class="swellLabel">PERIOD</div>
      </div>
 
-
      <div class="swellMetric">
-
       <div class="swellValue">
        ${
         swellDirection!=null
@@ -1552,42 +1537,28 @@ function cardHTML(item){
         : "—"
        }
       </div>
-
-      <div class="swellLabel">
-       DIRECTION
-      </div>
-
+      <div class="swellLabel">DIRECTION</div>
      </div>
 
     </div>
-
 
     <div style="
      margin-top:10px;
      color:var(--muted);
      font-size:12px
     ">
-
-     Total waves:
+     Total wave height:
      ${
       wave!=null
       ? Number(wave).toFixed(1)+"m"
       : "—"
      }
-
-     ${
-      wavePeriod!=null
-      ? " @ "+Math.round(wavePeriod)+"s"
-      : ""
-     }
-
     </div>
 
    </div>
 
-  `;
-
- }
+  `
+  :"";
 
 
  const hours=
@@ -1595,8 +1566,7 @@ function cardHTML(item){
   .slice(0,9)
   .map(hour=>{
 
-
-   let state;
+   let hourState;
 
 
    if(
@@ -1605,16 +1575,17 @@ function cardHTML(item){
     )
    ){
 
-    state=
+    hourState=
      foilDriveState(
       hour.swell,
       hour.swellPeriod,
       hour.wind
      );
 
-   }else{
+   }
+   else{
 
-    state=
+    hourState=
      windState(
       hour.wind,
       hour.gust
@@ -1623,10 +1594,10 @@ function cardHTML(item){
    }
 
 
-   const cssClass=
-    state==="go"
+   const css=
+    hourState==="go"
     ? "goHour"
-    : state==="maybe"
+    : hourState==="maybe"
     ? "maybeHour"
     : "";
 
@@ -1647,16 +1618,14 @@ function cardHTML(item){
 
     if(
      hour.swellPeriod!=null
-    ){
-
+    )
      detail+=
       ` @ ${Math.round(
        hour.swellPeriod
       )}s`;
 
-    }
-
-   }else{
+   }
+   else{
 
     const rec=
      windRecommendations(
@@ -1666,17 +1635,15 @@ function cardHTML(item){
 
     detail=
      rec.length
-     ? rec.map(
-        x=>x.kit
-       ).join("/")
+     ? rec.map(x=>x.kit).join("/")
      : "—";
 
    }
 
 
-   return `
+   return`
 
-    <div class="hour ${cssClass}">
+    <div class="hour ${css}">
 
      <div class="hourTime">
       ${hhmm(hour.time)}
@@ -1702,7 +1669,7 @@ function cardHTML(item){
   .join("");
 
 
- return `
+ return`
 
   <div
    class="card"
@@ -1713,9 +1680,7 @@ function cardHTML(item){
 
     <div>
 
-     <h2>
-      ${item.spot.name}
-     </h2>
+     <h2>${item.spot.name}</h2>
 
      <div class="source">
       MODEL FORECAST
@@ -1727,9 +1692,8 @@ function cardHTML(item){
 
     </div>
 
-
-    <div class="badge ${primaryState}">
-     ${primaryState.toUpperCase()}
+    <div class="badge ${state}">
+     ${state.toUpperCase()}
     </div>
 
    </div>
@@ -1738,46 +1702,21 @@ function cardHTML(item){
    <div class="grid">
 
     <div class="metric">
-
-     <div class="value">
-      ${wind}kt
-     </div>
-
-     <div class="label">
-      WIND
-     </div>
-
+     <div class="value">${wind}kt</div>
+     <div class="label">WIND</div>
     </div>
 
-
     <div class="metric">
-
-     <div class="value">
-      ${gust}kt
-     </div>
-
-     <div class="label">
-      GUST
-     </div>
-
+     <div class="value">${gust}kt</div>
+     <div class="label">GUST</div>
     </div>
 
-
     <div class="metric">
-
-     <div class="value">
-      ${direction}
-     </div>
-
-     <div class="label">
-      WIND DIRECTION
-     </div>
-
+     <div class="value">${direction}</div>
+     <div class="label">WIND DIRECTION</div>
     </div>
 
-
     <div class="metric">
-
      <div class="value">
       ${
        wave!=null
@@ -1785,11 +1724,7 @@ function cardHTML(item){
        : "—"
       }
      </div>
-
-     <div class="label">
-      WAVE HEIGHT
-     </div>
-
+     <div class="label">WAVE HEIGHT</div>
     </div>
 
    </div>
@@ -1800,10 +1735,7 @@ function cardHTML(item){
 
    <div class="gear">
 
-    <strong>
-     Recommended
-    </strong>
-
+    <strong>Recommended</strong>
     <br>
 
     ${recommendation}
@@ -1822,9 +1754,9 @@ function cardHTML(item){
 }
 
 
-/* ==========================================
-   MAIN RENDER
-========================================== */
+/* ===============================
+   RENDER
+================================ */
 
 function render(){
 
@@ -1837,9 +1769,9 @@ function render(){
  document.getElementById(
   "cards"
  ).innerHTML=
-  latestData
-   .map(cardHTML)
-   .join("");
+  latestData.map(
+   cardHTML
+  ).join("");
 
 
  document.querySelectorAll(
@@ -1873,11 +1805,11 @@ function render(){
    `${bestWind.wind}kt ${bestWind.dir} · `+
    `gusting ${bestWind.gust}kt · `+
    bestWind.recs.map(
-    x=>
-     `${x.sport} ${x.kit}`
+    x=>`${x.sport} ${x.kit}`
    ).join(" / ");
 
- }else{
+ }
+ else{
 
   document.getElementById(
    "bestWind"
@@ -1913,14 +1845,12 @@ function render(){
    ).toFixed(1)}m @ `+
    `${Math.round(
     bestFoil.swellPeriod
-   )}s `+
-   `${compass(
-    bestFoil.swellDirection
-   )} · `+
+   )}s · `+
    `${bestFoil.wind}kt wind · `+
    `${profile.fdFoil} ${profile.fdFoilSize}`;
 
- }else{
+ }
+ else{
 
   document.getElementById(
    "bestFoil"
@@ -1942,7 +1872,7 @@ function render(){
   );
 
 
- if(bestFoil || bestWind){
+ if(bestWind || bestFoil){
 
   heroBadge.className=
    "badge go";
@@ -1957,23 +1887,15 @@ function render(){
    "There's a session showing today";
 
 
-  if(bestFoil){
+  document.getElementById(
+   "heroText"
+  ).textContent=
+   bestFoil
+   ? `Foil Drive opportunity at ${bestFoil.spot}`
+   : `Wind session at ${bestWind.spot}`;
 
-   document.getElementById(
-    "heroText"
-   ).textContent=
-    `Foil Drive opportunity at ${bestFoil.spot}`;
-
-  }else{
-
-   document.getElementById(
-    "heroText"
-   ).textContent=
-    `Wind session at ${bestWind.spot}`;
-
-  }
-
- }else{
+ }
+ else{
 
   heroBadge.className=
    "badge no";
@@ -1996,72 +1918,39 @@ function render(){
  }
 
 
- renderTides(
-  latestTides
- );
+ renderTides();
 
 }
 
 
-/* ==========================================
-   SETTINGS UI
-========================================== */
+/* ===============================
+   SETTINGS
+================================ */
 
 function rangeRow(item){
 
  const row=
-  document.createElement(
-   "div"
-  );
+  document.createElement("div");
 
 
- row.className=
-  "rangeRow";
+ row.className="rangeRow";
 
 
  row.innerHTML=`
 
   <div class="field">
-
-   <label>
-    Size
-   </label>
-
-   <input
-    class="rName"
-    value="${item.name}"
-   >
-
+   <label>Size</label>
+   <input class="rName" value="${item.name}">
   </div>
 
-
   <div class="field">
-
-   <label>
-    Min kt
-   </label>
-
-   <input
-    class="rMin"
-    type="number"
-    value="${item.min}"
-   >
-
+   <label>Min kt</label>
+   <input class="rMin" type="number" value="${item.min}">
   </div>
 
-
   <div class="field">
-
-   <label>
-    Max kt
-   </label>
-
-   <input
-    class="rMax"
-    type="number"
-    value="${item.max}"
-   >
-
+   <label>Max kt</label>
+   <input class="rMax" type="number" value="${item.max}">
   </div>
 
  `;
@@ -2072,10 +1961,7 @@ function rangeRow(item){
 }
 
 
-function fillRanges(
- id,
- list
-){
+function fillRanges(id,list){
 
  const box=
   document.getElementById(id);
@@ -2096,69 +1982,37 @@ function fillRanges(
 
 function populateSetup(){
 
- document.getElementById(
-  "weight"
- ).value=
+ weight.value=
   profile.weight;
 
-
- document.getElementById(
-  "wingBoard"
- ).value=
+ wingBoard.value=
   profile.wingBoard;
 
-
- document.getElementById(
-  "wingLitres"
- ).value=
+ wingLitres.value=
   profile.wingLitres;
 
-
- document.getElementById(
-  "wingFoil"
- ).value=
+ wingFoil.value=
   profile.wingFoil;
 
-
- document.getElementById(
-  "wingFoilSize"
- ).value=
+ wingFoilSize.value=
   profile.wingFoilSize;
 
-
- document.getElementById(
-  "fdBoard"
- ).value=
+ fdBoard.value=
   profile.fdBoard;
 
-
- document.getElementById(
-  "fdLitres"
- ).value=
+ fdLitres.value=
   profile.fdLitres;
 
-
- document.getElementById(
-  "fdFoil"
- ).value=
+ fdFoil.value=
   profile.fdFoil;
 
-
- document.getElementById(
-  "fdFoilSize"
- ).value=
+ fdFoilSize.value=
   profile.fdFoilSize;
 
-
- document.getElementById(
-  "fdMinSwell"
- ).value=
+ fdMinSwell.value=
   profile.fdMinSwell;
 
-
- document.getElementById(
-  "fdMinPeriod"
- ).value=
+ fdMinPeriod.value=
   profile.fdMinPeriod;
 
 
@@ -2178,7 +2032,7 @@ function populateSetup(){
 
 function readRanges(id){
 
- return [
+ return[
   ...document.querySelectorAll(
    `#${id} .rangeRow`
   )
@@ -2186,22 +2040,16 @@ function readRanges(id){
  .map(row=>({
 
   name:
-   row.querySelector(
-    ".rName"
-   ).value.trim(),
+   row.querySelector(".rName").value.trim(),
 
   min:
    Number(
-    row.querySelector(
-     ".rMin"
-    ).value
+    row.querySelector(".rMin").value
    ),
 
   max:
    Number(
-    row.querySelector(
-     ".rMax"
-    ).value
+    row.querySelector(".rMax").value
    )
 
  }))
@@ -2215,383 +2063,237 @@ function readRanges(id){
 }
 
 
-/* OPEN SETTINGS */
+openSetup.onclick=()=>{
 
-document.getElementById(
- "openSetup"
-).addEventListener(
- "click",
- ()=>{
+ populateSetup();
 
-  populateSetup();
+ setupModal.classList.add("open");
 
-  document.getElementById(
-   "setupModal"
-  ).classList.add(
-   "open"
-  );
-
- }
-);
+};
 
 
-/* CLOSE SETTINGS */
+closeSetup.onclick=()=>{
 
-document.getElementById(
- "closeSetup"
-).addEventListener(
- "click",
- ()=>{
+ setupModal.classList.remove("open");
 
-  document.getElementById(
-   "setupModal"
-  ).classList.remove(
-   "open"
-  );
-
- }
-);
+};
 
 
-/* ADD WING */
+addWing.onclick=()=>{
 
-document.getElementById(
- "addWing"
-).addEventListener(
- "click",
- ()=>{
+ wingRanges.appendChild(
 
-  document.getElementById(
-   "wingRanges"
-  ).appendChild(
+  rangeRow({
+   name:"",
+   min:10,
+   max:20
+  })
 
-   rangeRow({
-    name:"",
-    min:10,
-    max:20
-   })
+ );
 
-  );
-
- }
-);
+};
 
 
-/* ADD PARAWING */
+addPara.onclick=()=>{
 
-document.getElementById(
- "addPara"
-).addEventListener(
- "click",
- ()=>{
+ paraRanges.appendChild(
 
-  document.getElementById(
-   "paraRanges"
-  ).appendChild(
+  rangeRow({
+   name:"",
+   min:8,
+   max:18
+  })
 
-   rangeRow({
-    name:"",
-    min:8,
-    max:18
-   })
+ );
 
-  );
-
- }
-);
+};
 
 
-/* SAVE SETTINGS */
+saveSetup.onclick=()=>{
 
-document.getElementById(
- "saveSetup"
-).addEventListener(
- "click",
- ()=>{
+ profile={
 
-  profile={
+  weight:Number(weight.value)||80,
 
-   weight:
-    Number(
-     document.getElementById(
-      "weight"
-     ).value
-    ) || 80,
+  wingBoard:
+   wingBoard.value.trim()||"Board",
 
+  wingLitres:
+   Number(wingLitres.value)||100,
 
-   wingBoard:
-    document.getElementById(
-     "wingBoard"
-    ).value.trim() || "Board",
+  wingFoil:
+   wingFoil.value.trim()||"Foil",
 
+  wingFoilSize:
+   Number(wingFoilSize.value)||1000,
 
-   wingLitres:
-    Number(
-     document.getElementById(
-      "wingLitres"
-     ).value
-    ) || 100,
+  wings:
+   readRanges("wingRanges"),
 
+  paras:
+   readRanges("paraRanges"),
 
-   wingFoil:
-    document.getElementById(
-     "wingFoil"
-    ).value.trim() || "Foil",
+  fdBoard:
+   fdBoard.value.trim()||"Board",
 
+  fdLitres:
+   Number(fdLitres.value)||100,
 
-   wingFoilSize:
-    Number(
-     document.getElementById(
-      "wingFoilSize"
-     ).value
-    ) || 1000,
+  fdFoil:
+   fdFoil.value.trim()||"Foil",
 
+  fdFoilSize:
+   Number(fdFoilSize.value)||1200,
 
-   wings:
-    readRanges(
-     "wingRanges"
-    ),
+  fdMinSwell:
+   Number(fdMinSwell.value)||0.5,
+
+  fdMinPeriod:
+   Number(fdMinPeriod.value)||7
+
+ };
 
 
-   paras:
-    readRanges(
-     "paraRanges"
-    ),
+ saveProfile();
 
 
-   fdBoard:
-    document.getElementById(
-     "fdBoard"
-    ).value.trim() || "Board",
+ setupModal.classList.remove("open");
 
 
-   fdLitres:
-    Number(
-     document.getElementById(
-      "fdLitres"
-     ).value
-    ) || 100,
+ render();
+
+};
 
 
-   fdFoil:
-    document.getElementById(
-     "fdFoil"
-    ).value.trim() || "Foil",
+resetSetup.onclick=()=>{
 
-
-   fdFoilSize:
-    Number(
-     document.getElementById(
-      "fdFoilSize"
-     ).value
-    ) || 1200,
-
-
-   fdMinSwell:
-    Number(
-     document.getElementById(
-      "fdMinSwell"
-     ).value
-    ) || 0.5,
-
-
-   fdMinPeriod:
-    Number(
-     document.getElementById(
-      "fdMinPeriod"
-     ).value
-    ) || 7
-
-  };
-
-
-  saveProfile();
-
-
-  document.getElementById(
-   "setupModal"
-  ).classList.remove(
-   "open"
+ profile=
+  JSON.parse(
+   JSON.stringify(
+    DEFAULT_PROFILE
+   )
   );
 
 
-  render();
+ saveProfile();
 
- }
-);
+ populateSetup();
 
+ render();
 
-/* RESET */
-
-document.getElementById(
- "resetSetup"
-).addEventListener(
- "click",
- ()=>{
-
-  profile=
-   JSON.parse(
-    JSON.stringify(
-     DEFAULT_PROFILE
-    )
-   );
+};
 
 
-  saveProfile();
-
-  populateSetup();
-
-  render();
-
- }
-);
-
-
-/* ==========================================
-   SPOT TABS
-========================================== */
+/* ===============================
+   TABS
+================================ */
 
 document.querySelectorAll(
  ".tab"
 ).forEach(button=>{
 
- button.addEventListener(
-  "click",
-  ()=>{
+ button.onclick=()=>{
 
-   selectedSpot=
-    button.dataset.spot;
+  selectedSpot=
+   button.dataset.spot;
 
 
-   document.querySelectorAll(
-    ".tab"
-   ).forEach(
-    item=>
-     item.classList.remove(
-      "active"
-     )
-   );
+  document.querySelectorAll(
+   ".tab"
+  ).forEach(
+   item=>
+    item.classList.remove("active")
+  );
 
 
-   button.classList.add(
-    "active"
-   );
+  button.classList.add("active");
 
 
-   render();
+  render();
 
-  }
- );
+ };
 
 });
 
 
-/* ==========================================
-   LOAD EVERYTHING
-========================================== */
+/* ===============================
+   LOAD
+================================ */
 
 async function load(){
 
  try{
 
-
-  const results=
-   await Promise.all([
-
-
-    Promise.all(
-
-     spots.map(
-      async spot=>{
-
-
-       const [
-        weather,
-        marine
-       ]=
-        await Promise.all([
-
-         getWeather(spot),
-
-         getMarine(spot)
-
-        ]);
-
-
-       return {
-
-        spot:spot,
-
-        weather:weather,
-
-        marine:marine,
-
-        hours:
-         combineHours(
-          weather,
-          marine
-         )
-
-       };
-
-      }
-     )
-
-    ),
-
-
-    getPooleTides()
-
-   ]);
-
-
   latestData=
-   results[0];
+   await Promise.all(
+
+    spots.map(
+     async spot=>{
+
+      const[
+       weather,
+       marine
+      ]=
+       await Promise.all([
+
+        getWeather(spot),
+
+        getMarine(spot)
+
+       ]);
 
 
-  latestTides=
-   results[1];
+      return{
+
+       spot,
+
+       weather,
+
+       marine,
+
+       hours:
+        combineHours(
+         weather,
+         marine
+        )
+
+      };
+
+     }
+    )
+
+   );
 
 
   render();
 
 
-  document.getElementById(
-   "updated"
-  ).textContent=
+  updated.textContent=
    "Updated "+
    hhmm(
     new Date()
    );
 
 
- }catch(error){
-
+ }
+ catch(error){
 
   console.error(error);
 
 
-  document.getElementById(
-   "heroTitle"
-  ).textContent=
+  heroTitle.textContent=
    "Forecast unavailable";
 
 
-  document.getElementById(
-   "heroText"
-  ).textContent=
+  heroText.textContent=
    "Try refreshing the page.";
 
 
-  document.getElementById(
-   "heroBadge"
-  ).className=
+  heroBadge.className=
    "badge no";
 
 
-  document.getElementById(
-   "heroBadge"
-  ).textContent=
+  heroBadge.textContent=
    "ERROR";
 
  }
@@ -2599,12 +2301,8 @@ async function load(){
 }
 
 
-/* FIRST LOAD */
-
 load();
 
-
-/* REFRESH EVERY 10 MINUTES */
 
 setInterval(
  load,
