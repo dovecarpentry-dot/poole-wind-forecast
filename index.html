@@ -17,194 +17,401 @@ body{
  margin:0;background:var(--bg);color:var(--text);
  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
 }
-.wrap{max-width:850px;margin:auto;padding:24px 16px 60px}
-.top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
-h1{margin:0;font-size:30px}
-.sub,.updated{color:var(--muted);margin-top:6px}
-.updated{white-space:nowrap}
+button,input,select{font:inherit}
+.wrap{max-width:850px;margin:auto;padding:22px 14px 60px}
+
+.top{
+ display:flex;justify-content:space-between;
+ align-items:flex-start;gap:10px
+}
+h1{margin:0;font-size:29px}
+.sub,.updated{color:var(--muted)}
+.sub{margin-top:5px}
+.updated{font-size:14px;white-space:nowrap}
+
+.setupButton{
+ margin-top:14px;width:100%;
+ background:#173b53;border:1px solid var(--line);
+ color:white;border-radius:16px;padding:13px;
+ font-weight:850;font-size:16px
+}
 
 .hero{
- margin-top:22px;padding:22px;border-radius:25px;
+ margin-top:15px;padding:20px;border-radius:24px;
  background:linear-gradient(135deg,#163d56,#0d293c);
  border:1px solid var(--line)
 }
-.heroRow{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
-.hero h2{margin:0 0 7px;font-size:25px}
-.hero p{color:var(--muted);margin:0;font-size:17px;line-height:1.4}
+.heroRow{
+ display:flex;justify-content:space-between;
+ align-items:flex-start;gap:12px
+}
+.hero h2{margin:0 0 7px;font-size:24px}
+.hero p{margin:0;color:var(--muted);line-height:1.45}
 
 .badge{
- font-weight:900;font-size:20px;padding:12px 17px;
- border-radius:18px;color:#071827;white-space:nowrap
+ font-weight:900;font-size:19px;padding:11px 15px;
+ border-radius:16px;color:#071827;white-space:nowrap
 }
 .go{background:var(--green)}
 .maybe{background:var(--amber)}
 .no{background:var(--red)}
 
-.best{
- margin-top:16px;padding:18px;border-radius:20px;
- background:#0e3145;border:1px solid #2c607c
-}
-.bestTitle{
- color:var(--blue);font-size:13px;font-weight:900;
- text-transform:uppercase;letter-spacing:.8px
-}
-.bestMain{font-size:23px;font-weight:900;margin-top:5px}
-.bestSub{color:var(--muted);margin-top:5px;line-height:1.5}
-
-.wingRec{
- display:inline-block;margin-top:10px;
- background:var(--green);color:#071827;
- padding:8px 12px;border-radius:12px;
- font-weight:900;font-size:18px
-}
-
-.tide{
+.best,.tide{
  margin-top:14px;padding:16px;border-radius:18px;
- background:#0b2232;border:1px solid var(--line)
+ background:#0b293c;border:1px solid var(--line)
 }
-.tideTitle{
- font-size:13px;color:var(--blue);
- font-weight:900;letter-spacing:.7px
+.kicker{
+ color:var(--blue);font-size:12px;font-weight:900;
+ letter-spacing:.8px;text-transform:uppercase
 }
-.tideMain{font-size:19px;font-weight:850;margin-top:6px}
-.tideSub{color:var(--muted);margin-top:4px}
+.bestMain{font-size:22px;font-weight:900;margin-top:5px}
+.bestSub,.tideSub{color:var(--muted);margin-top:5px;line-height:1.45}
+
+.kitPill{
+ display:inline-block;margin-top:10px;
+ padding:8px 12px;border-radius:12px;
+ background:var(--green);color:#071827;font-weight:900
+}
 
 .tabs{
- display:flex;gap:8px;overflow-x:auto;
- padding:18px 0 12px
+ display:flex;gap:8px;overflow-x:auto;padding:17px 0 5px
 }
 .tab{
- border:1px solid var(--line);background:#0d2536;color:white;
- border-radius:25px;padding:12px 18px;
+ border:1px solid var(--line);background:#0d2536;
+ color:white;border-radius:22px;padding:11px 15px;
  font-weight:800;white-space:nowrap
 }
-.tab.active{background:var(--blue);color:#082033}
+.tab.active{background:var(--blue);color:#071827}
 
 .card{
- background:var(--card);border:1px solid var(--line);
- border-radius:24px;padding:20px;margin-top:14px
+ margin-top:13px;background:var(--card);
+ border:1px solid var(--line);border-radius:22px;padding:18px
 }
 .cardTop{
  display:flex;justify-content:space-between;
  align-items:center;gap:10px
 }
-.card h2{margin:0;font-size:24px}
-
+.card h2{margin:0;font-size:23px}
 .source{
- display:inline-block;margin-top:7px;color:var(--blue);
- font-size:11px;font-weight:900;letter-spacing:.7px
+ margin-top:5px;color:var(--blue);
+ font-size:11px;font-weight:900
 }
 
 .grid{
  display:grid;grid-template-columns:1fr 1fr;
- gap:10px;margin-top:16px
+ gap:9px;margin-top:14px
 }
 .metric{
- text-align:center;padding:15px 8px;
- border-radius:16px;background:var(--card2)
+ text-align:center;background:var(--card2);
+ padding:13px 6px;border-radius:15px
 }
-.value{font-size:25px;font-weight:900}
-.label{
- color:var(--muted);font-size:13px;
- font-weight:700;margin-top:3px
-}
+.value{font-size:23px;font-weight:900}
+.label{font-size:12px;color:var(--muted);font-weight:800}
 
-.reason{
- margin-top:14px;font-size:16px;
- line-height:1.45
-}
-
+.reason{margin-top:13px;line-height:1.45}
 .gear{
- margin-top:12px;padding:12px 14px;
- border-radius:14px;background:#0b2232;
- color:#dbe8f1;line-height:1.45
+ margin-top:10px;background:#0b2232;
+ border-radius:13px;padding:11px;line-height:1.45
 }
 
 .hours{
- display:flex;gap:9px;overflow-x:auto;
- margin-top:16px;padding-bottom:4px
+ display:flex;gap:8px;overflow-x:auto;
+ margin-top:14px;padding-bottom:3px
 }
 .hour{
- min-width:108px;border:1px solid var(--line);
- border-radius:16px;padding:12px 8px;text-align:center
+ min-width:105px;border:1px solid var(--line);
+ border-radius:14px;text-align:center;padding:10px 7px
 }
-.hour.good{border-color:var(--green)}
-.hour.marginal{border-color:var(--amber)}
-.hourTime{color:var(--muted);font-size:14px}
-.hourWind{font-size:21px;font-weight:900;margin:7px 0}
-.hourDir{color:var(--muted);font-size:13px}
+.hour.goHour{border-color:var(--green)}
+.hour.maybeHour{border-color:var(--amber)}
+.hourTime,.hourSmall{font-size:12px;color:var(--muted)}
+.hourWind{font-size:20px;font-weight:900;margin:5px 0}
 
+.modal{
+ display:none;position:fixed;inset:0;
+ background:rgba(0,0,0,.72);z-index:20;
+ padding:15px;overflow:auto
+}
+.modal.open{display:block}
+.panel{
+ max-width:650px;margin:20px auto;
+ background:#0d2536;border:1px solid var(--line);
+ border-radius:22px;padding:20px
+}
+.panelTop{
+ display:flex;justify-content:space-between;
+ align-items:center;gap:10px
+}
+.panel h2{margin:0;font-size:25px}
+.close{
+ border:0;background:#173b53;color:white;
+ width:44px;height:44px;border-radius:14px;font-size:20px
+}
+
+.section{
+ margin-top:20px;padding-top:17px;border-top:1px solid var(--line)
+}
+.section h3{margin:0 0 12px}
+.formGrid{
+ display:grid;grid-template-columns:1fr 1fr;gap:11px
+}
+.field label{
+ display:block;color:var(--muted);
+ font-size:12px;font-weight:800;margin-bottom:5px
+}
+.field input,.field select{
+ width:100%;background:#071827;color:white;
+ border:1px solid var(--line);border-radius:12px;
+ padding:12px;font-size:16px
+}
+
+.rangeRow{
+ display:grid;grid-template-columns:1fr 85px 85px;
+ gap:8px;align-items:end;margin-top:9px
+}
+.rangeName input{font-weight:850}
+
+.addButton,.saveButton,.resetButton{
+ width:100%;border-radius:14px;padding:13px;
+ font-weight:900;margin-top:11px
+}
+.addButton{
+ background:#173b53;color:white;border:1px solid var(--line)
+}
+.saveButton{
+ background:var(--green);color:#071827;border:0;font-size:17px
+}
+.resetButton{
+ background:transparent;color:var(--muted);
+ border:1px solid var(--line)
+}
+
+.remove{
+ background:transparent;color:#ff9aa5;border:0;
+ font-size:12px;padding:6px 0
+}
+
+.profileSummary{
+ color:var(--muted);font-size:13px;
+ margin-top:8px;line-height:1.45
+}
 .notice{
  color:var(--muted);font-size:12px;
- margin-top:22px;line-height:1.5
+ line-height:1.5;margin-top:20px
 }
-.error{padding:20px;color:#ffd2d6}
 
 @media(max-width:520px){
- .wrap{padding:20px 14px 50px}
- h1{font-size:29px}
- .heroRow{align-items:center}
- .hero h2{font-size:23px}
+ .formGrid{grid-template-columns:1fr}
+ .rangeRow{grid-template-columns:1fr 72px 72px}
 }
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
-<div class="top">
- <div>
-  <h1>Poole Wind & Surf</h1>
-  <div class="sub">Wing foil + surf session finder</div>
- </div>
- <div class="updated" id="updated">Loading…</div>
-</div>
-
-<div class="hero">
-
- <div class="heroRow">
+ <div class="top">
   <div>
-   <h2 id="heroTitle">Checking today…</h2>
-   <p id="heroText">Looking for a usable wing window.</p>
+   <h1>Poole Wind & Surf</h1>
+   <div class="sub">Personal wing + parawing session finder</div>
   </div>
-  <div id="heroBadge" class="badge maybe">WAIT</div>
+  <div class="updated" id="updated">Loading…</div>
  </div>
 
- <div class="best">
-  <div class="bestTitle">Best wing session today</div>
-  <div class="bestMain" id="bestMain">Calculating…</div>
-  <div class="bestSub" id="bestSub"></div>
-  <div id="wingRec"></div>
+ <button class="setupButton" id="openSetup">
+  ⚙️ My Setup
+ </button>
+
+ <div class="profileSummary" id="profileSummary"></div>
+
+ <div class="hero">
+
+  <div class="heroRow">
+   <div>
+    <h2 id="heroTitle">Checking today…</h2>
+    <p id="heroText">Looking for your best session.</p>
+   </div>
+   <div class="badge maybe" id="heroBadge">WAIT</div>
+  </div>
+
+  <div class="best">
+   <div class="kicker">Best session today</div>
+   <div class="bestMain" id="bestMain">Calculating…</div>
+   <div class="bestSub" id="bestSub"></div>
+   <div id="kitPill"></div>
+  </div>
+
+  <div class="tide">
+   <div class="kicker">Poole tide today</div>
+   <div class="bestMain" id="tideMain">Loading…</div>
+   <div class="tideSub" id="tideSub"></div>
+  </div>
+
  </div>
 
- <div class="tide">
-  <div class="tideTitle">POOLE TIDE TODAY</div>
-  <div class="tideMain" id="tideMain">Loading…</div>
-  <div class="tideSub" id="tideSub"></div>
+ <div class="tabs" id="tabs">
+  <button class="tab active" data-spot="All">All spots</button>
+  <button class="tab" data-spot="Poole Harbour">Poole Harbour</button>
+  <button class="tab" data-spot="Hamworthy">Hamworthy</button>
+  <button class="tab" data-spot="Branksome">Branksome</button>
+  <button class="tab" data-spot="Southbourne">Southbourne</button>
+  <button class="tab" data-spot="Kimmeridge">Kimmeridge</button>
+ </div>
+
+ <div id="cards"></div>
+
+ <div class="notice">
+ Forecast information is guidance only. MODEL NOW is modelled weather,
+ not an on-site wind reading. Always check actual wind, tide, sea state
+ and launch conditions before going afloat.
  </div>
 
 </div>
 
-<div class="tabs">
- <div class="tab active">All spots</div>
- <div class="tab">Poole Harbour</div>
- <div class="tab">Hamworthy</div>
- <div class="tab">Branksome</div>
- <div class="tab">Southbourne</div>
- <div class="tab">Kimmeridge</div>
+
+<div class="modal" id="setupModal">
+
+ <div class="panel">
+
+  <div class="panelTop">
+   <h2>My Setup</h2>
+   <button class="close" id="closeSetup">✕</button>
+  </div>
+
+  <div class="section">
+
+   <h3>Rider</h3>
+
+   <div class="formGrid">
+
+    <div class="field">
+     <label>Riding type</label>
+     <select id="sport">
+      <option value="wing">Wing foil</option>
+      <option value="parawing">Parawing</option>
+      <option value="both">Wing + Parawing</option>
+     </select>
+    </div>
+
+    <div class="field">
+     <label>Weight (kg)</label>
+     <input id="weight" type="number" min="30" max="200">
+    </div>
+
+   </div>
+
+  </div>
+
+
+  <div class="section">
+
+   <h3>Board</h3>
+
+   <div class="formGrid">
+
+    <div class="field">
+     <label>Board name</label>
+     <input id="boardName" type="text">
+    </div>
+
+    <div class="field">
+     <label>Volume (litres)</label>
+     <input id="boardLitres" type="number" min="20" max="250">
+    </div>
+
+   </div>
+
+  </div>
+
+
+  <div class="section">
+
+   <h3>Foil</h3>
+
+   <div class="formGrid">
+
+    <div class="field">
+     <label>Foil name</label>
+     <input id="foilName" type="text">
+    </div>
+
+    <div class="field">
+     <label>Foil size (cm²)</label>
+     <input id="foilSize" type="number" min="300" max="3000">
+    </div>
+
+   </div>
+
+  </div>
+
+
+  <div class="section">
+
+   <h3>Wing wind ranges</h3>
+
+   <div id="wingRanges"></div>
+
+   <button class="addButton" id="addWing">
+    + Add another wing
+   </button>
+
+  </div>
+
+
+  <div class="section" id="paraSection">
+
+   <h3>Parawing wind ranges</h3>
+
+   <div id="paraRanges"></div>
+
+   <button class="addButton" id="addPara">
+    + Add another parawing
+   </button>
+
+  </div>
+
+
+  <button class="saveButton" id="saveSetup">
+   Save My Setup
+  </button>
+
+  <button class="resetButton" id="resetSetup">
+   Reset to default setup
+  </button>
+
+ </div>
+
 </div>
 
-<div id="cards"></div>
-
-<div class="notice">
-MODEL NOW means modelled weather rather than an on-site observation.
-Tide times are Poole Harbour predictions. Always check actual wind,
-water level, sea state and launch conditions before going afloat.
-</div>
-
-</div>
 
 <script>
+
+const DEFAULT_PROFILE={
+ sport:"wing",
+ weight:110,
+ boardName:"KT",
+ boardLitres:104,
+ foilName:"SK8",
+ foilSize:1050,
+
+ wings:[
+  {name:"6 m",min:12,max:17},
+  {name:"5 m",min:18,max:21},
+  {name:"4 m",min:22,max:30},
+  {name:"3.3 m",min:31,max:45}
+ ],
+
+ paras:[
+  {name:"5 m",min:8,max:13},
+  {name:"4 m",min:12,max:17},
+  {name:"3 m",min:16,max:22}
+ ]
+};
+
+let profile=loadProfile();
+let selectedSpot="All";
+let latestData=[];
 
 const spots=[
  {name:"Poole Harbour",lat:50.700,lon:-1.995,type:"wing"},
@@ -214,7 +421,9 @@ const spots=[
  {name:"Kimmeridge",lat:50.610,lon:-2.130,type:"surf"}
 ];
 
-/* Poole Harbour tide predictions — 28 September 2026 */
+
+/* TODAY'S POOLE TIDE DATA */
+
 const tides=[
  {time:"2026-09-28T05:49:00",type:"Low",height:0.40},
  {time:"2026-09-28T10:55:00",type:"High",height:2.39},
@@ -222,126 +431,140 @@ const tides=[
  {time:"2026-09-28T23:12:00",type:"High",height:2.46}
 ];
 
-function compass(d){
- const a=["N","NE","E","SE","S","SW","W","NW"];
- return a[Math.round(d/45)%8];
+
+/* PROFILE */
+
+function loadProfile(){
+
+ try{
+
+  const saved=localStorage.getItem("pooleWindProfile");
+
+  if(saved)
+   return JSON.parse(saved);
+
+ }catch(e){}
+
+ return JSON.parse(JSON.stringify(DEFAULT_PROFILE));
 }
 
-function hhmm(d){
- return d.toLocaleTimeString(
+function saveProfile(){
+
+ localStorage.setItem(
+  "pooleWindProfile",
+  JSON.stringify(profile)
+ );
+}
+
+function profileText(){
+
+ const sports=
+  profile.sport==="both"
+  ? "Wing + Parawing"
+  : profile.sport==="parawing"
+  ? "Parawing"
+  : "Wing";
+
+ return `${sports} · ${profile.weight}kg · `+
+        `${profile.boardLitres}L · `+
+        `${profile.foilName} ${profile.foilSize}`;
+}
+
+
+/* UTILITIES */
+
+function compass(d){
+
+ const dirs=["N","NE","E","SE","S","SW","W","NW"];
+
+ return dirs[
+  Math.round(d/45)%8
+ ];
+}
+
+function hhmm(date){
+
+ return date.toLocaleTimeString(
   "en-GB",
   {hour:"2-digit",minute:"2-digit"}
  );
 }
 
-/* JON'S WING RANGES */
+function kitForWind(list,wind){
 
-function wingFor(wind){
+ const matches=list.filter(
+  x=>wind>=Number(x.min) &&
+     wind<=Number(x.max)
+ );
 
- if(wind < 12)
+ if(!matches.length)
   return null;
 
- if(wind < 18)
-  return "6 m";
-
- if(wind < 22)
-  return "5 m";
-
- if(wind <= 30)
-  return "4 m";
-
- return "3.3 m";
+ return matches[0];
 }
 
-function wingState(wind,gust){
+function recommendation(wind){
 
- if(wind < 12)
+ let options=[];
+
+ if(
+  profile.sport==="wing" ||
+  profile.sport==="both"
+ ){
+
+  const wing=
+   kitForWind(profile.wings,wind);
+
+  if(wing)
+   options.push({
+    sport:"WING",
+    kit:wing.name
+   });
+ }
+
+ if(
+  profile.sport==="parawing" ||
+  profile.sport==="both"
+ ){
+
+  const para=
+   kitForWind(profile.paras,wind);
+
+  if(para)
+   options.push({
+    sport:"PARAWING",
+    kit:para.name
+   });
+ }
+
+ return options;
+}
+
+function stateFor(wind,gust){
+
+ const recs=recommendation(wind);
+
+ if(!recs.length)
   return "no";
 
- /* 12kt is usable but marginal */
- if(wind < 14)
-  return "maybe";
-
- /*
-  Very gusty conditions get MAYBE rather
-  than an automatic GO.
- */
- if(gust-wind >= 12)
+ if(gust-wind>=12)
   return "maybe";
 
  return "go";
 }
 
-function stateLabel(s){
- if(s==="go") return "GO";
- if(s==="maybe") return "MAYBE";
+function stateLabel(state){
+
+ if(state==="go") return "GO";
+ if(state==="maybe") return "MAYBE";
+
  return "NO";
 }
 
-function foilFor(wind){
-
- if(wind < 12)
-  return "No foil session";
-
- if(wind < 16)
-  return "Seven Seas / larger efficient foil";
-
- return "SK8 1050";
-}
-
-/* TIDE */
-
-function tideInfo(){
-
- const now=new Date();
-
- let prev=null;
- let next=null;
-
- for(const t of tides){
-
-  const d=new Date(t.time);
-
-  if(d<=now)
-   prev={...t,date:d};
-
-  if(d>now && !next)
-   next={...t,date:d};
- }
-
- if(!next){
-
-  return {
-   main:"Today's final tide event has passed",
-   sub:"Check tomorrow's Poole tide table."
-  };
- }
-
- let movement="";
-
- if(prev){
-
-  movement=
-   prev.type==="Low" &&
-   next.type==="High"
-   ? "Rising"
-   : "Falling";
- }
-
- return {
-  main:
-   `${movement ? movement+" · " : ""}`+
-   `Next ${next.type} ${hhmm(next.date)}`,
-
-  sub:
-   `${next.height.toFixed(2)} m · `+
-   `Poole Harbour prediction`
- };
-}
 
 /* WEATHER */
 
-async function weather(spot){
+async function getWeather(spot){
 
  const url=
  "https://api.open-meteo.com/v1/forecast"+
@@ -361,9 +584,8 @@ async function weather(spot){
  return r.json();
 }
 
-/* MARINE */
 
-async function marine(spot){
+async function getMarine(spot){
 
  if(spot.type==="wing")
   return null;
@@ -375,8 +597,6 @@ async function marine(spot){
   "?latitude="+spot.lat+
   "&longitude="+spot.lon+
   "&current=wave_height,wave_direction,wave_period,"+
-  "swell_wave_height,swell_wave_direction,swell_wave_period"+
-  "&hourly=wave_height,wave_direction,wave_period,"+
   "swell_wave_height,swell_wave_direction,swell_wave_period"+
   "&timezone=Europe%2FLondon"+
   "&forecast_days=1";
@@ -394,70 +614,130 @@ async function marine(spot){
  }
 }
 
-/* FUTURE HOURS */
 
-function futureHours(w){
+function futureHours(weather){
 
  const now=new Date();
- const arr=[];
+ const result=[];
 
- for(let i=0;i<w.hourly.time.length;i++){
+ for(
+  let i=0;
+  i<weather.hourly.time.length;
+  i++
+ ){
 
-  const time=new Date(w.hourly.time[i]);
+  const time=
+   new Date(weather.hourly.time[i]);
 
   if(time>=now){
 
-   arr.push({
+   result.push({
+
     time,
+
     wind:Math.round(
-     w.hourly.wind_speed_10m[i]
+     weather.hourly.wind_speed_10m[i]
     ),
+
     gust:Math.round(
-     w.hourly.wind_gusts_10m[i]
+     weather.hourly.wind_gusts_10m[i]
     ),
+
     dir:compass(
-     w.hourly.wind_direction_10m[i]
+     weather.hourly.wind_direction_10m[i]
     )
+
    });
   }
  }
 
- return arr;
+ return result;
 }
 
-/* FIND BEST WING WINDOW */
 
-function findWingWindow(data){
+/* TIDES */
+
+function tideInfo(){
+
+ const now=new Date();
+
+ let previous=null;
+ let next=null;
+
+ tides.forEach(t=>{
+
+  const date=new Date(t.time);
+
+  if(date<=now)
+   previous={...t,date};
+
+  if(date>now && !next)
+   next={...t,date};
+ });
+
+ if(!next){
+
+  return {
+   main:"Today's final tide event has passed",
+   sub:"Check tomorrow's Poole tide table."
+  };
+ }
+
+ let movement="";
+
+ if(previous){
+
+  movement=
+   previous.type==="Low" &&
+   next.type==="High"
+   ? "Rising"
+   : "Falling";
+ }
+
+ return {
+
+  main:
+   `${movement} · Next ${next.type} `+
+   `${hhmm(next.date)}`,
+
+  sub:
+   `${next.height.toFixed(2)} m · `+
+   `Poole Harbour prediction`
+ };
+}
+
+
+/* BEST SESSION */
+
+function findBest(data){
 
  let candidates=[];
 
  data
  .filter(x=>x.spot.type!=="surf")
- .forEach(x=>{
+ .forEach(item=>{
 
-  x.hours.forEach((h,i)=>{
+  item.hours.forEach((h,index)=>{
 
-   /* Minimum usable wind = 12kt */
+   const recs=
+    recommendation(h.wind);
 
-   if(h.wind>=12){
+   if(!recs.length)
+    return;
 
-    let score=h.wind;
+   let score=h.wind;
 
-    /* Sweet spot */
-    if(h.wind>=14 && h.wind<=25)
-     score+=15;
+   if(h.gust-h.wind<10)
+    score+=10;
 
-    /* Excessive gustiness penalty */
-    if(h.gust-h.wind>=10)
-     score-=5;
+   candidates.push({
+    spot:item.spot.name,
+    index,
+    ...h,
+    recs,
+    score
+   });
 
-    candidates.push({
-     spot:x.spot.name,
-     index:i,
-     ...h,
-     score
-    });
-   }
   });
  });
 
@@ -470,7 +750,7 @@ function findWingWindow(data){
 
  const best=candidates[0];
 
- const spotData=
+ const spot=
   data.find(
    x=>x.spot.name===best.spot
   );
@@ -480,420 +760,720 @@ function findWingWindow(data){
 
  while(
   start>0 &&
-  spotData.hours[start-1].wind>=12
+  recommendation(
+   spot.hours[start-1].wind
+  ).length
  )
   start--;
 
  while(
-  end<spotData.hours.length-1 &&
-  spotData.hours[end+1].wind>=12
+  end<spot.hours.length-1 &&
+  recommendation(
+   spot.hours[end+1].wind
+  ).length
  )
   end++;
 
  return {
-  spot:best.spot,
-  start:spotData.hours[start],
-  end:spotData.hours[end],
-  peak:best
+  ...best,
+  start:spot.hours[start],
+  end:spot.hours[end]
  };
 }
 
-/* MARINE VALUES */
 
-function marineValues(m){
+/* CARDS */
 
- if(!m || !m.current)
-  return null;
+function cardHTML(item){
 
- const c=m.current;
+ const c=item.weather.current;
 
- return {
-  wave:c.wave_height,
-  waveDir:c.wave_direction,
-  wavePeriod:c.wave_period,
-  swell:c.swell_wave_height,
-  swellDir:c.swell_wave_direction,
-  swellPeriod:c.swell_wave_period
- };
-}
+ const wind=
+  Math.round(c.wind_speed_10m);
 
-/* SPOT CARDS */
+ const gust=
+  Math.round(c.wind_gusts_10m);
 
-function cardHTML(x){
-
- const c=x.weather.current;
-
- const wind=Math.round(
-  c.wind_speed_10m
- );
-
- const gust=Math.round(
-  c.wind_gusts_10m
- );
-
- const dir=compass(
-  c.wind_direction_10m
- );
+ const dir=
+  compass(c.wind_direction_10m);
 
  const state=
-  x.spot.type==="surf"
+  item.spot.type==="surf"
   ? "maybe"
-  : wingState(wind,gust);
+  : stateFor(wind,gust);
 
- const sea=marineValues(x.marine);
+ const recs=
+  recommendation(wind);
 
  let wave="—";
- let period="—";
- let waveDir="—";
+ let marineText="";
 
- if(sea && sea.wave!=null){
+ if(
+  item.marine &&
+  item.marine.current
+ ){
 
-  wave=sea.wave.toFixed(1)+"m";
+  const m=item.marine.current;
 
-  period=
-   sea.wavePeriod
-   ? Math.round(sea.wavePeriod)+"s"
-   : "—";
+  if(m.wave_height!=null)
+   wave=
+    Number(m.wave_height)
+    .toFixed(1)+"m";
 
-  waveDir=
-   sea.waveDir!=null
-   ? compass(sea.waveDir)
-   : "—";
+  if(item.spot.type==="surf"){
+
+   marineText=
+    `Wave ${wave}`;
+
+   if(m.wave_period!=null)
+    marineText+=
+     ` @ ${Math.round(m.wave_period)}s`;
+
+   if(m.wave_direction!=null)
+    marineText+=
+     ` from ${compass(m.wave_direction)}`;
+  }
  }
 
- let reason="";
  let gear="";
 
- if(x.spot.type==="surf"){
+ if(item.spot.type==="surf"){
 
-  if(sea && sea.wave!=null){
+  gear="Surf forecast";
 
-   reason=
-    `Surf model: ${wave} @ ${period} `+
-    `from ${waveDir}.`;
-
-   if(sea.swell!=null){
-
-    reason+=
-     ` Swell ${sea.swell.toFixed(1)}m `+
-     `@ ${Math.round(sea.swellPeriod||0)}s `+
-     `from ${compass(sea.swellDir)}.`;
-   }
-
-  }else{
-
-   reason="Marine forecast unavailable.";
-  }
+ }else if(recs.length){
 
   gear=
-   "Surf-only spot — no wing recommendation.";
+   recs.map(
+    x=>`${x.sport}: ${x.kit}`
+   ).join(" · ");
 
  }else{
 
-  const wing=wingFor(wind);
-
-  if(wind<12){
-
-   reason=
-    `${wind}kt sustained is below your `+
-    `minimum useful wing wind.`;
-
-   gear="No wing session";
-
-  }else{
-
-   reason=
-    `${wind}kt sustained · gusting ${gust}kt.`;
-
-   gear=
-    `${wing} wing · ${foilFor(wind)}`;
-  }
+  gear=
+   "No matching kit in your setup";
  }
 
- const hours=x.hours
- .slice(0,8)
- .map(h=>{
+ const hours=
+  item.hours
+  .slice(0,8)
+  .map(h=>{
 
-  const state=
-   wingState(h.wind,h.gust);
+   const s=
+    stateFor(h.wind,h.gust);
 
-  const cls=
-   state==="go"
-   ? "good"
-   : state==="maybe"
-   ? "marginal"
-   : "";
+   const cls=
+    s==="go"
+    ? "goHour"
+    : s==="maybe"
+    ? "maybeHour"
+    : "";
 
-  const wing=wingFor(h.wind);
+   const r=
+    recommendation(h.wind);
 
-  return `
-   <div class="hour ${cls}">
-    <div class="hourTime">
-     ${hhmm(h.time)}
+   const kit=
+    r.length
+    ? r.map(x=>x.kit).join(" / ")
+    : "—";
+
+   return `
+    <div class="hour ${cls}">
+
+     <div class="hourTime">
+      ${hhmm(h.time)}
+     </div>
+
+     <div class="hourWind">
+      ${h.wind}kt
+     </div>
+
+     <div class="hourSmall">
+      ${h.dir} · G${h.gust}
+     </div>
+
+     <div class="hourSmall">
+      ${kit}
+     </div>
+
     </div>
-
-    <div class="hourWind">
-     ${h.wind}kt
-    </div>
-
-    <div class="hourDir">
-     ${h.dir} · G${h.gust}
-    </div>
-
-    ${
-     wing
-     ? `<div class="hourDir">
-         ${wing}
-        </div>`
-     : ""
-    }
-   </div>`;
- }).join("");
+   `;
+  }).join("");
 
  return `
- <div class="card">
+  <div class="card" data-card="${item.spot.name}">
 
-  <div class="cardTop">
+   <div class="cardTop">
 
-   <div>
-    <h2>${x.spot.name}</h2>
-    <div class="source">
-     MODEL NOW
+    <div>
+     <h2>${item.spot.name}</h2>
+     <div class="source">MODEL NOW</div>
     </div>
-   </div>
 
-   <div class="badge ${state}">
-    ${stateLabel(state)}
-   </div>
-
-  </div>
-
-  <div class="grid">
-
-   <div class="metric">
-    <div class="value">${wind}kt</div>
-    <div class="label">WIND</div>
-   </div>
-
-   <div class="metric">
-    <div class="value">${gust}kt</div>
-    <div class="label">GUST</div>
-   </div>
-
-   <div class="metric">
-    <div class="value">${dir}</div>
-    <div class="label">DIRECTION</div>
-   </div>
-
-   <div class="metric">
-    <div class="value">${wave}</div>
-    <div class="label">
-     ${x.spot.type==="surf" ? "WAVE" : "SEA"}
+    <div class="badge ${state}">
+     ${stateLabel(state)}
     </div>
+
+   </div>
+
+   <div class="grid">
+
+    <div class="metric">
+     <div class="value">${wind}kt</div>
+     <div class="label">WIND</div>
+    </div>
+
+    <div class="metric">
+     <div class="value">${gust}kt</div>
+     <div class="label">GUST</div>
+    </div>
+
+    <div class="metric">
+     <div class="value">${dir}</div>
+     <div class="label">DIRECTION</div>
+    </div>
+
+    <div class="metric">
+     <div class="value">${wave}</div>
+     <div class="label">SEA</div>
+    </div>
+
+   </div>
+
+   <div class="reason">
+    ${
+     item.spot.type==="surf"
+     ? marineText
+     : `${wind}kt sustained · gusting ${gust}kt`
+    }
+   </div>
+
+   <div class="gear">
+    <strong>Recommended:</strong> ${gear}
+    <br>
+    <span style="color:var(--muted)">
+     ${profile.boardLitres}L ${profile.boardName}
+     · ${profile.foilName} ${profile.foilSize}
+    </span>
+   </div>
+
+   <div class="hours">
+    ${hours}
    </div>
 
   </div>
-
-  <div class="reason">
-   ${reason}
-  </div>
-
-  <div class="gear">
-   <strong>Kit:</strong> ${gear}
-  </div>
-
-  <div class="hours">
-   ${hours}
-  </div>
-
- </div>`;
+ `;
 }
 
-/* LOAD APP */
+
+/* RENDER */
+
+function render(){
+
+ document.getElementById(
+  "profileSummary"
+ ).textContent=profileText();
+
+ document.getElementById(
+  "cards"
+ ).innerHTML=
+  latestData.map(cardHTML).join("");
+
+ document
+ .querySelectorAll("[data-card]")
+ .forEach(card=>{
+
+  card.style.display=
+   selectedSpot==="All" ||
+   card.dataset.card===selectedSpot
+   ? "block"
+   : "none";
+
+ });
+
+ const best=findBest(latestData);
+
+ const strongest=
+  latestData
+  .filter(x=>x.spot.type!=="surf")
+  .map(x=>({
+
+   name:x.spot.name,
+
+   wind:Math.round(
+    x.weather.current.wind_speed_10m
+   ),
+
+   gust:Math.round(
+    x.weather.current.wind_gusts_10m
+   )
+
+  }))
+  .sort(
+   (a,b)=>b.wind-a.wind
+  )[0];
+
+ const currentState=
+  stateFor(
+   strongest.wind,
+   strongest.gust
+  );
+
+ const badge=
+  document.getElementById("heroBadge");
+
+ badge.className=
+  `badge ${currentState}`;
+
+ badge.textContent=
+  stateLabel(currentState);
+
+ if(currentState==="go"){
+
+  document.getElementById(
+   "heroTitle"
+  ).textContent=
+   "Session conditions showing now";
+
+  document.getElementById(
+   "heroText"
+  ).textContent=
+   `${strongest.name}: `+
+   `${strongest.wind}kt · `+
+   `gusting ${strongest.gust}kt`;
+
+ }else if(currentState==="maybe"){
+
+  document.getElementById(
+   "heroTitle"
+  ).textContent=
+   "Marginal conditions right now";
+
+  document.getElementById(
+   "heroText"
+  ).textContent=
+   "Check your setup and the hourly forecast.";
+
+ }else{
+
+  document.getElementById(
+   "heroTitle"
+  ).textContent=
+   "No session right now";
+
+  document.getElementById(
+   "heroText"
+  ).textContent=
+   "Checking later today for your equipment.";
+ }
+
+ const kitPill=
+  document.getElementById("kitPill");
+
+ if(best){
+
+  document.getElementById(
+   "bestMain"
+  ).textContent=
+   `${best.spot} · `+
+   `${hhmm(best.start.time)}–`+
+   `${hhmm(best.end.time)}`;
+
+  document.getElementById(
+   "bestSub"
+  ).textContent=
+   `Peak ${best.wind}kt ${best.dir} · `+
+   `gusting ${best.gust}kt`;
+
+  kitPill.innerHTML=
+   best.recs.map(
+    x=>
+    `<span class="kitPill">
+      ${x.sport} · ${x.kit}
+     </span>`
+   ).join(" ");
+
+ }else{
+
+  document.getElementById(
+   "bestMain"
+  ).textContent=
+   "NO MATCHING SESSION TODAY";
+
+  document.getElementById(
+   "bestSub"
+  ).textContent=
+   "Today's forecast does not match your saved wind ranges.";
+
+  kitPill.innerHTML="";
+ }
+
+ const tide=tideInfo();
+
+ document.getElementById(
+  "tideMain"
+ ).textContent=tide.main;
+
+ document.getElementById(
+  "tideSub"
+ ).textContent=tide.sub;
+}
+
+
+/* SETTINGS UI */
+
+function rangeRow(item,type){
+
+ const row=document.createElement("div");
+
+ row.className="rangeRow";
+
+ row.innerHTML=`
+
+  <div class="field rangeName">
+   <label>Size</label>
+   <input
+    type="text"
+    value="${item.name}"
+    data-type="${type}"
+    data-field="name">
+  </div>
+
+  <div class="field">
+   <label>Min kt</label>
+   <input
+    type="number"
+    value="${item.min}"
+    data-type="${type}"
+    data-field="min">
+  </div>
+
+  <div class="field">
+   <label>Max kt</label>
+   <input
+    type="number"
+    value="${item.max}"
+    data-type="${type}"
+    data-field="max">
+  </div>
+
+ `;
+
+ return row;
+}
+
+
+function populateSetup(){
+
+ document.getElementById("sport").value=
+  profile.sport;
+
+ document.getElementById("weight").value=
+  profile.weight;
+
+ document.getElementById("boardName").value=
+  profile.boardName;
+
+ document.getElementById("boardLitres").value=
+  profile.boardLitres;
+
+ document.getElementById("foilName").value=
+  profile.foilName;
+
+ document.getElementById("foilSize").value=
+  profile.foilSize;
+
+ const wings=
+  document.getElementById("wingRanges");
+
+ wings.innerHTML="";
+
+ profile.wings.forEach(
+  x=>wings.appendChild(
+   rangeRow(x,"wing")
+  )
+ );
+
+ const paras=
+  document.getElementById("paraRanges");
+
+ paras.innerHTML="";
+
+ profile.paras.forEach(
+  x=>paras.appendChild(
+   rangeRow(x,"para")
+  )
+ );
+}
+
+
+function readRanges(type){
+
+ const container=
+  type==="wing"
+  ? document.getElementById("wingRanges")
+  : document.getElementById("paraRanges");
+
+ const rows=[
+  ...container.querySelectorAll(".rangeRow")
+ ];
+
+ return rows.map(row=>({
+
+  name:
+   row.querySelector(
+    '[data-field="name"]'
+   ).value.trim(),
+
+  min:
+   Number(
+    row.querySelector(
+     '[data-field="min"]'
+    ).value
+   ),
+
+  max:
+   Number(
+    row.querySelector(
+     '[data-field="max"]'
+    ).value
+   )
+
+ })).filter(
+  x=>x.name &&
+     Number.isFinite(x.min) &&
+     Number.isFinite(x.max)
+ );
+}
+
+
+document.getElementById(
+ "openSetup"
+).addEventListener(
+ "click",
+ ()=>{
+
+  populateSetup();
+
+  document.getElementById(
+   "setupModal"
+  ).classList.add("open");
+ }
+);
+
+
+document.getElementById(
+ "closeSetup"
+).addEventListener(
+ "click",
+ ()=>{
+
+  document.getElementById(
+   "setupModal"
+  ).classList.remove("open");
+ }
+);
+
+
+document.getElementById(
+ "addWing"
+).addEventListener(
+ "click",
+ ()=>{
+
+  document.getElementById(
+   "wingRanges"
+  ).appendChild(
+   rangeRow(
+    {name:"",min:10,max:20},
+    "wing"
+   )
+  );
+ }
+);
+
+
+document.getElementById(
+ "addPara"
+).addEventListener(
+ "click",
+ ()=>{
+
+  document.getElementById(
+   "paraRanges"
+  ).appendChild(
+   rangeRow(
+    {name:"",min:8,max:18},
+    "para"
+   )
+  );
+ }
+);
+
+
+document.getElementById(
+ "saveSetup"
+).addEventListener(
+ "click",
+ ()=>{
+
+  profile={
+
+   sport:
+    document.getElementById(
+     "sport"
+    ).value,
+
+   weight:
+    Number(
+     document.getElementById(
+      "weight"
+     ).value
+    ) || 80,
+
+   boardName:
+    document.getElementById(
+     "boardName"
+    ).value.trim() || "Board",
+
+   boardLitres:
+    Number(
+     document.getElementById(
+      "boardLitres"
+     ).value
+    ) || 100,
+
+   foilName:
+    document.getElementById(
+     "foilName"
+    ).value.trim() || "Foil",
+
+   foilSize:
+    Number(
+     document.getElementById(
+      "foilSize"
+     ).value
+    ) || 1000,
+
+   wings:
+    readRanges("wing"),
+
+   paras:
+    readRanges("para")
+  };
+
+  saveProfile();
+
+  document.getElementById(
+   "setupModal"
+  ).classList.remove("open");
+
+  render();
+ }
+);
+
+
+document.getElementById(
+ "resetSetup"
+).addEventListener(
+ "click",
+ ()=>{
+
+  profile=
+   JSON.parse(
+    JSON.stringify(DEFAULT_PROFILE)
+   );
+
+  saveProfile();
+  populateSetup();
+  render();
+ }
+);
+
+
+/* SPOT TABS */
+
+document.querySelectorAll(
+ ".tab"
+).forEach(button=>{
+
+ button.addEventListener(
+  "click",
+  ()=>{
+
+   selectedSpot=
+    button.dataset.spot;
+
+   document.querySelectorAll(
+    ".tab"
+   ).forEach(
+    x=>x.classList.remove("active")
+   );
+
+   button.classList.add("active");
+
+   render();
+  }
+ );
+});
+
+
+/* LOAD */
 
 async function load(){
 
  try{
 
-  const data=
+  latestData=
    await Promise.all(
 
     spots.map(async spot=>{
 
-     const [w,m]=
+     const [weather,marine]=
       await Promise.all([
-       weather(spot),
-       marine(spot)
+       getWeather(spot),
+       getMarine(spot)
       ]);
 
      return {
       spot,
-      weather:w,
-      marine:m,
-      hours:futureHours(w)
+      weather,
+      marine,
+      hours:futureHours(weather)
      };
     })
+
    );
 
-  document.getElementById("cards")
-   .innerHTML=
-   data.map(cardHTML).join("");
+  render();
 
-  const session=
-   findWingWindow(data);
-
-  const title=
-   document.getElementById("heroTitle");
-
-  const heroText=
-   document.getElementById("heroText");
-
-  const badge=
-   document.getElementById("heroBadge");
-
-  const main=
-   document.getElementById("bestMain");
-
-  const sub=
-   document.getElementById("bestSub");
-
-  const wingRec=
-   document.getElementById("wingRec");
-
-  const strongest=
-   data
-   .filter(x=>x.spot.type!=="surf")
-   .map(x=>({
-
-    name:x.spot.name,
-
-    wind:Math.round(
-     x.weather.current.wind_speed_10m
-    ),
-
-    gust:Math.round(
-     x.weather.current.wind_gusts_10m
-    )
-
-   }))
-   .sort(
-    (a,b)=>b.wind-a.wind
-   )[0];
-
-  const currentState=
-   wingState(
-    strongest.wind,
-    strongest.gust
-   );
-
-  if(currentState==="go"){
-
-   badge.className="badge go";
-   badge.textContent="GO";
-
-   title.textContent=
-    "Wing conditions showing now";
-
-   heroText.textContent=
-    `${strongest.name}: `+
-    `${strongest.wind}kt `+
-    `gusting ${strongest.gust}kt.`;
-
-  }else if(currentState==="maybe"){
-
-   badge.className="badge maybe";
-   badge.textContent="MAYBE";
-
-   title.textContent=
-    "Marginal session right now";
-
-   heroText.textContent=
-    `${strongest.name}: `+
-    `${strongest.wind}kt `+
-    `gusting ${strongest.gust}kt.`;
-
-  }else{
-
-   badge.className="badge no";
-   badge.textContent="NO";
-
-   title.textContent=
-    "No wing session right now";
-
-   heroText.textContent=
-    "Checking the rest of today.";
-  }
-
-  if(session){
-
-   const start=
-    hhmm(session.start.time);
-
-   const end=
-    hhmm(session.end.time);
-
-   const wing=
-    wingFor(session.peak.wind);
-
-   main.textContent=
-    `${session.spot} · ${start}–${end}`;
-
-   sub.innerHTML=
-    `Peak around ${hhmm(session.peak.time)}: `+
-    `<strong>${session.peak.wind}kt `+
-    `${session.peak.dir}</strong> · `+
-    `gusting ${session.peak.gust}kt`;
-
-   wingRec.innerHTML=
-    `<div class="wingRec">
-      ${wing} WING
-     </div>`;
-
-  }else{
-
-   main.textContent=
-    "NO USABLE WING WINDOW TODAY";
-
-   sub.textContent=
-    "Forecast remains below 12kt sustained.";
-
-   wingRec.innerHTML="";
-  }
-
-  const tide=tideInfo();
-
-  document.getElementById("tideMain")
-   .textContent=tide.main;
-
-  document.getElementById("tideSub")
-   .textContent=tide.sub;
-
-  document.getElementById("updated")
-   .textContent=
+  document.getElementById(
+   "updated"
+  ).textContent=
    "Updated "+hhmm(new Date());
 
- }catch(e){
+ }catch(error){
 
-  console.error(e);
+  console.error(error);
 
-  document.getElementById("heroTitle")
-   .textContent="Data unavailable";
+  document.getElementById(
+   "heroTitle"
+  ).textContent=
+   "Forecast unavailable";
 
-  document.getElementById("heroText")
-   .textContent="Try refreshing the page.";
-
-  document.getElementById("cards")
-   .innerHTML=
-   '<div class="card error">'+
-   'Unable to load forecast data.'+
-   '</div>';
+  document.getElementById(
+   "heroText"
+  ).textContent=
+   "Try refreshing the page.";
  }
 }
 
 load();
 
-/* refresh every 10 minutes */
-setInterval(load,10*60*1000);
+setInterval(
+ load,
+ 10*60*1000
+);
 
 </script>
 
