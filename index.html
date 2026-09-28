@@ -18,39 +18,31 @@ body{
  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
 }
 button,input,select{font:inherit}
-.wrap{max-width:850px;margin:auto;padding:22px 14px 60px}
-
-.top{
- display:flex;justify-content:space-between;
- align-items:flex-start;gap:10px
-}
+.wrap{max-width:900px;margin:auto;padding:22px 14px 60px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 h1{margin:0;font-size:29px}
 .sub,.updated{color:var(--muted)}
 .sub{margin-top:5px}
-.updated{font-size:14px;white-space:nowrap}
+.updated{font-size:13px;white-space:nowrap}
 
 .setupButton{
- margin-top:14px;width:100%;
- background:#173b53;border:1px solid var(--line);
- color:white;border-radius:16px;padding:13px;
- font-weight:850;font-size:16px
+ margin-top:14px;width:100%;background:#173b53;border:1px solid var(--line);
+ color:white;border-radius:16px;padding:13px;font-weight:850;font-size:16px
 }
+.profileSummary{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.45}
 
 .hero{
  margin-top:15px;padding:20px;border-radius:24px;
  background:linear-gradient(135deg,#163d56,#0d293c);
  border:1px solid var(--line)
 }
-.heroRow{
- display:flex;justify-content:space-between;
- align-items:flex-start;gap:12px
-}
+.heroRow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .hero h2{margin:0 0 7px;font-size:24px}
 .hero p{margin:0;color:var(--muted);line-height:1.45}
 
 .badge{
- font-weight:900;font-size:19px;padding:11px 15px;
- border-radius:16px;color:#071827;white-space:nowrap
+ font-weight:900;font-size:17px;padding:10px 13px;
+ border-radius:15px;color:#071827;white-space:nowrap
 }
 .go{background:var(--green)}
 .maybe{background:var(--amber)}
@@ -64,62 +56,53 @@ h1{margin:0;font-size:29px}
  color:var(--blue);font-size:12px;font-weight:900;
  letter-spacing:.8px;text-transform:uppercase
 }
-.bestMain{font-size:22px;font-weight:900;margin-top:5px}
+.bestMain{font-size:21px;font-weight:900;margin-top:5px}
 .bestSub,.tideSub{color:var(--muted);margin-top:5px;line-height:1.45}
 
-.kitPill{
- display:inline-block;margin-top:10px;
- padding:8px 12px;border-radius:12px;
- background:var(--green);color:#071827;font-weight:900
-}
-
-.tabs{
- display:flex;gap:8px;overflow-x:auto;padding:17px 0 5px
-}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:17px 0 5px}
 .tab{
- border:1px solid var(--line);background:#0d2536;
- color:white;border-radius:22px;padding:11px 15px;
- font-weight:800;white-space:nowrap
+ border:1px solid var(--line);background:#0d2536;color:white;
+ border-radius:22px;padding:11px 15px;font-weight:800;white-space:nowrap
 }
 .tab.active{background:var(--blue);color:#071827}
 
 .card{
- margin-top:13px;background:var(--card);
- border:1px solid var(--line);border-radius:22px;padding:18px
+ margin-top:13px;background:var(--card);border:1px solid var(--line);
+ border-radius:22px;padding:18px
 }
-.cardTop{
- display:flex;justify-content:space-between;
- align-items:center;gap:10px
-}
+.cardTop{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .card h2{margin:0;font-size:23px}
-.source{
- margin-top:5px;color:var(--blue);
- font-size:11px;font-weight:900
-}
+.source{margin-top:5px;color:var(--blue);font-size:11px;font-weight:900}
+.sports{margin-top:6px;color:var(--muted);font-size:12px}
 
 .grid{
- display:grid;grid-template-columns:1fr 1fr;
+ display:grid;grid-template-columns:repeat(2,1fr);
  gap:9px;margin-top:14px
 }
 .metric{
- text-align:center;background:var(--card2);
- padding:13px 6px;border-radius:15px
+ text-align:center;background:var(--card2);padding:13px 6px;border-radius:15px
 }
-.value{font-size:23px;font-weight:900}
-.label{font-size:12px;color:var(--muted);font-weight:800}
+.value{font-size:22px;font-weight:900}
+.label{font-size:11px;color:var(--muted);font-weight:800}
 
-.reason{margin-top:13px;line-height:1.45}
+.swellBox{
+ margin-top:12px;background:#0b2232;border:1px solid var(--line);
+ border-radius:16px;padding:14px
+}
+.swellTitle{font-weight:900;margin-bottom:10px}
+.swellGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swellMetric{text-align:center}
+.swellValue{font-size:20px;font-weight:900}
+.swellLabel{font-size:10px;color:var(--muted)}
+
 .gear{
- margin-top:10px;background:#0b2232;
- border-radius:13px;padding:11px;line-height:1.45
+ margin-top:11px;background:#0b2232;border-radius:13px;
+ padding:11px;line-height:1.5
 }
 
-.hours{
- display:flex;gap:8px;overflow-x:auto;
- margin-top:14px;padding-bottom:3px
-}
+.hours{display:flex;gap:8px;overflow-x:auto;margin-top:14px;padding-bottom:3px}
 .hour{
- min-width:105px;border:1px solid var(--line);
+ min-width:112px;border:1px solid var(--line);
  border-radius:14px;text-align:center;padding:10px 7px
 }
 .hour.goHour{border-color:var(--green)}
@@ -128,76 +111,45 @@ h1{margin:0;font-size:29px}
 .hourWind{font-size:20px;font-weight:900;margin:5px 0}
 
 .modal{
- display:none;position:fixed;inset:0;
- background:rgba(0,0,0,.72);z-index:20;
- padding:15px;overflow:auto
+ display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);
+ z-index:20;padding:15px;overflow:auto
 }
 .modal.open{display:block}
 .panel{
- max-width:650px;margin:20px auto;
- background:#0d2536;border:1px solid var(--line);
- border-radius:22px;padding:20px
+ max-width:650px;margin:20px auto;background:#0d2536;
+ border:1px solid var(--line);border-radius:22px;padding:20px
 }
-.panelTop{
- display:flex;justify-content:space-between;
- align-items:center;gap:10px
-}
+.panelTop{display:flex;justify-content:space-between;align-items:center}
 .panel h2{margin:0;font-size:25px}
 .close{
- border:0;background:#173b53;color:white;
- width:44px;height:44px;border-radius:14px;font-size:20px
+ border:0;background:#173b53;color:white;width:44px;height:44px;
+ border-radius:14px;font-size:20px
 }
-
-.section{
- margin-top:20px;padding-top:17px;border-top:1px solid var(--line)
-}
+.section{margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
 .section h3{margin:0 0 12px}
-.formGrid{
- display:grid;grid-template-columns:1fr 1fr;gap:11px
-}
+.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .field label{
- display:block;color:var(--muted);
- font-size:12px;font-weight:800;margin-bottom:5px
+ display:block;color:var(--muted);font-size:12px;font-weight:800;margin-bottom:5px
 }
-.field input,.field select{
- width:100%;background:#071827;color:white;
- border:1px solid var(--line);border-radius:12px;
- padding:12px;font-size:16px
+.field input{
+ width:100%;background:#071827;color:white;border:1px solid var(--line);
+ border-radius:12px;padding:12px;font-size:16px
 }
-
 .rangeRow{
  display:grid;grid-template-columns:1fr 85px 85px;
  gap:8px;align-items:end;margin-top:9px
 }
-.rangeName input{font-weight:850}
-
 .addButton,.saveButton,.resetButton{
- width:100%;border-radius:14px;padding:13px;
- font-weight:900;margin-top:11px
+ width:100%;border-radius:14px;padding:13px;font-weight:900;margin-top:11px
 }
-.addButton{
- background:#173b53;color:white;border:1px solid var(--line)
-}
-.saveButton{
- background:var(--green);color:#071827;border:0;font-size:17px
-}
-.resetButton{
- background:transparent;color:var(--muted);
- border:1px solid var(--line)
-}
+.addButton{background:#173b53;color:white;border:1px solid var(--line)}
+.saveButton{background:var(--green);color:#071827;border:0;font-size:17px}
+.resetButton{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.notice{color:var(--muted);font-size:12px;line-height:1.5;margin-top:20px}
 
-.remove{
- background:transparent;color:#ff9aa5;border:0;
- font-size:12px;padding:6px 0
-}
-
-.profileSummary{
- color:var(--muted);font-size:13px;
- margin-top:8px;line-height:1.45
-}
-.notice{
- color:var(--muted);font-size:12px;
- line-height:1.5;margin-top:20px
+.tideTag{
+ display:inline-block;margin-top:8px;padding:5px 8px;border-radius:8px;
+ background:#173b53;color:var(--blue);font-size:10px;font-weight:900
 }
 
 @media(max-width:520px){
@@ -214,15 +166,12 @@ h1{margin:0;font-size:29px}
  <div class="top">
   <div>
    <h1>Poole Wind & Surf</h1>
-   <div class="sub">Personal wing + parawing session finder</div>
+   <div class="sub">Wing · Parawing · Foil Drive · Surf</div>
   </div>
   <div class="updated" id="updated">Loading…</div>
  </div>
 
- <button class="setupButton" id="openSetup">
-  ⚙️ My Setup
- </button>
-
+ <button class="setupButton" id="openSetup">⚙️ My Setup</button>
  <div class="profileSummary" id="profileSummary"></div>
 
  <div class="hero">
@@ -230,170 +179,215 @@ h1{margin:0;font-size:29px}
   <div class="heroRow">
    <div>
     <h2 id="heroTitle">Checking today…</h2>
-    <p id="heroText">Looking for your best session.</p>
+    <p id="heroText">Looking for your best conditions.</p>
    </div>
    <div class="badge maybe" id="heroBadge">WAIT</div>
   </div>
 
   <div class="best">
-   <div class="kicker">Best session today</div>
-   <div class="bestMain" id="bestMain">Calculating…</div>
-   <div class="bestSub" id="bestSub"></div>
-   <div id="kitPill"></div>
+   <div class="kicker">Best wing / parawing session</div>
+   <div class="bestMain" id="bestWind">Calculating…</div>
+   <div class="bestSub" id="bestWindSub"></div>
+  </div>
+
+  <div class="best">
+   <div class="kicker">Best Foil Drive session</div>
+   <div class="bestMain" id="bestFoil">Calculating swell…</div>
+   <div class="bestSub" id="bestFoilSub"></div>
   </div>
 
   <div class="tide">
-   <div class="kicker">Poole tide today</div>
-   <div class="bestMain" id="tideMain">Loading…</div>
+   <div class="kicker">Poole Harbour tide</div>
+   <div class="bestMain" id="tideMain">Calculating tide…</div>
    <div class="tideSub" id="tideSub"></div>
+   <div class="tideTag">MODEL TIDE · CHECK WINDGURU / PHC</div>
   </div>
 
  </div>
 
- <div class="tabs" id="tabs">
-  <button class="tab active" data-spot="All">All spots</button>
-  <button class="tab" data-spot="Poole Harbour">Poole Harbour</button>
+ <div class="tabs">
+  <button class="tab active" data-spot="All">All</button>
+  <button class="tab" data-spot="Poole Harbour">Poole</button>
   <button class="tab" data-spot="Hamworthy">Hamworthy</button>
   <button class="tab" data-spot="Branksome">Branksome</button>
   <button class="tab" data-spot="Southbourne">Southbourne</button>
+  <button class="tab" data-spot="Chapman's Pool">Chapman's Pool</button>
   <button class="tab" data-spot="Kimmeridge">Kimmeridge</button>
  </div>
 
  <div id="cards"></div>
 
  <div class="notice">
- Forecast information is guidance only. MODEL NOW is modelled weather,
- not an on-site wind reading. Always check actual wind, tide, sea state
- and launch conditions before going afloat.
+ Forecast guidance only. Wind, swell and tide information is modelled.
+ Coastal conditions can differ significantly from the forecast.
+ Check actual wind, sea state, access, tide, hazards and local restrictions
+ before entering the water. Kimmeridge is surf-only in this app and will
+ never generate a foiling recommendation.
  </div>
 
 </div>
 
 
+<!-- SETTINGS -->
+
 <div class="modal" id="setupModal">
 
- <div class="panel">
+<div class="panel">
 
-  <div class="panelTop">
-   <h2>My Setup</h2>
-   <button class="close" id="closeSetup">✕</button>
+ <div class="panelTop">
+  <h2>My Setup</h2>
+  <button class="close" id="closeSetup">✕</button>
+ </div>
+
+ <div class="section">
+
+  <h3>Rider</h3>
+
+  <div class="formGrid">
+   <div class="field">
+    <label>Weight (kg)</label>
+    <input id="weight" type="number" min="30" max="200">
+   </div>
   </div>
 
-  <div class="section">
+ </div>
 
-   <h3>Rider</h3>
 
-   <div class="formGrid">
+ <div class="section">
 
-    <div class="field">
-     <label>Riding type</label>
-     <select id="sport">
-      <option value="wing">Wing foil</option>
-      <option value="parawing">Parawing</option>
-      <option value="both">Wing + Parawing</option>
-     </select>
-    </div>
+  <h3>Wing setup</h3>
 
-    <div class="field">
-     <label>Weight (kg)</label>
-     <input id="weight" type="number" min="30" max="200">
-    </div>
+  <div class="formGrid">
 
+   <div class="field">
+    <label>Board</label>
+    <input id="wingBoard" type="text">
+   </div>
+
+   <div class="field">
+    <label>Volume (L)</label>
+    <input id="wingLitres" type="number">
+   </div>
+
+   <div class="field">
+    <label>Foil</label>
+    <input id="wingFoil" type="text">
+   </div>
+
+   <div class="field">
+    <label>Foil size (cm²)</label>
+    <input id="wingFoilSize" type="number">
    </div>
 
   </div>
 
-
-  <div class="section">
-
-   <h3>Board</h3>
-
-   <div class="formGrid">
-
-    <div class="field">
-     <label>Board name</label>
-     <input id="boardName" type="text">
-    </div>
-
-    <div class="field">
-     <label>Volume (litres)</label>
-     <input id="boardLitres" type="number" min="20" max="250">
-    </div>
-
-   </div>
-
-  </div>
+ </div>
 
 
-  <div class="section">
+ <div class="section">
 
-   <h3>Foil</h3>
+  <h3>Wing wind ranges</h3>
 
-   <div class="formGrid">
+  <div id="wingRanges"></div>
 
-    <div class="field">
-     <label>Foil name</label>
-     <input id="foilName" type="text">
-    </div>
-
-    <div class="field">
-     <label>Foil size (cm²)</label>
-     <input id="foilSize" type="number" min="300" max="3000">
-    </div>
-
-   </div>
-
-  </div>
-
-
-  <div class="section">
-
-   <h3>Wing wind ranges</h3>
-
-   <div id="wingRanges"></div>
-
-   <button class="addButton" id="addWing">
-    + Add another wing
-   </button>
-
-  </div>
-
-
-  <div class="section" id="paraSection">
-
-   <h3>Parawing wind ranges</h3>
-
-   <div id="paraRanges"></div>
-
-   <button class="addButton" id="addPara">
-    + Add another parawing
-   </button>
-
-  </div>
-
-
-  <button class="saveButton" id="saveSetup">
-   Save My Setup
-  </button>
-
-  <button class="resetButton" id="resetSetup">
-   Reset to default setup
+  <button class="addButton" id="addWing">
+   + Add wing
   </button>
 
  </div>
 
+
+ <div class="section">
+
+  <h3>Parawing wind ranges</h3>
+
+  <div id="paraRanges"></div>
+
+  <button class="addButton" id="addPara">
+   + Add parawing
+  </button>
+
+ </div>
+
+
+ <div class="section">
+
+  <h3>Foil Drive setup</h3>
+
+  <div class="formGrid">
+
+   <div class="field">
+    <label>Board</label>
+    <input id="fdBoard" type="text">
+   </div>
+
+   <div class="field">
+    <label>Volume (L)</label>
+    <input id="fdLitres" type="number">
+   </div>
+
+   <div class="field">
+    <label>Foil</label>
+    <input id="fdFoil" type="text">
+   </div>
+
+   <div class="field">
+    <label>Foil size (cm²)</label>
+    <input id="fdFoilSize" type="number">
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="section">
+
+  <h3>Foil Drive swell preference</h3>
+
+  <div class="formGrid">
+
+   <div class="field">
+    <label>Minimum swell (m)</label>
+    <input id="fdMinSwell" type="number" step=".1">
+   </div>
+
+   <div class="field">
+    <label>Minimum period (sec)</label>
+    <input id="fdMinPeriod" type="number">
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <button class="saveButton" id="saveSetup">
+  Save My Setup
+ </button>
+
+ <button class="resetButton" id="resetSetup">
+  Reset defaults
+ </button>
+
+</div>
 </div>
 
 
 <script>
 
+/* ==========================================
+   DEFAULT PERSONAL SETUP
+========================================== */
+
 const DEFAULT_PROFILE={
- sport:"wing",
+
  weight:110,
- boardName:"KT",
- boardLitres:104,
- foilName:"SK8",
- foilSize:1050,
+
+ wingBoard:"KT",
+ wingLitres:104,
+ wingFoil:"SK8",
+ wingFoilSize:1050,
 
  wings:[
   {name:"6 m",min:12,max:17},
@@ -406,143 +400,255 @@ const DEFAULT_PROFILE={
   {name:"5 m",min:8,max:13},
   {name:"4 m",min:12,max:17},
   {name:"3 m",min:16,max:22}
- ]
+ ],
+
+ fdBoard:"KT",
+ fdLitres:104,
+ fdFoil:"Seven Seas",
+ fdFoilSize:1300,
+
+ fdMinSwell:0.5,
+ fdMinPeriod:7
 };
+
 
 let profile=loadProfile();
 let selectedSpot="All";
 let latestData=[];
+let latestTides=null;
+
+
+/* ==========================================
+   SPOTS
+========================================== */
 
 const spots=[
- {name:"Poole Harbour",lat:50.700,lon:-1.995,type:"wing"},
- {name:"Hamworthy",lat:50.720,lon:-2.018,type:"wing"},
- {name:"Branksome",lat:50.705,lon:-1.920,type:"wingsea"},
- {name:"Southbourne",lat:50.719,lon:-1.798,type:"wingsea"},
- {name:"Kimmeridge",lat:50.610,lon:-2.130,type:"surf"}
+
+ {
+  name:"Poole Harbour",
+  lat:50.700,
+  lon:-1.995,
+  sports:["Wing","Parawing"],
+  marine:false
+ },
+
+ {
+  name:"Hamworthy",
+  lat:50.720,
+  lon:-2.018,
+  sports:["Wing","Parawing"],
+  marine:false
+ },
+
+ {
+  name:"Branksome",
+  lat:50.705,
+  lon:-1.920,
+  sports:["Wing","Parawing","Foil Drive"],
+  marine:true
+ },
+
+ {
+  name:"Southbourne",
+  lat:50.719,
+  lon:-1.798,
+  sports:["Wing","Parawing","Foil Drive"],
+  marine:true
+ },
+
+ {
+  name:"Chapman's Pool",
+  lat:50.596,
+  lon:-2.063,
+  sports:["Foil Drive"],
+  marine:true
+ },
+
+ {
+  name:"Kimmeridge",
+  lat:50.610,
+  lon:-2.130,
+  sports:["Surf"],
+  marine:true
+ }
+
 ];
 
 
-/* TODAY'S POOLE TIDE DATA */
-
-const tides=[
- {time:"2026-09-28T05:49:00",type:"Low",height:0.40},
- {time:"2026-09-28T10:55:00",type:"High",height:2.39},
- {time:"2026-09-28T18:10:00",type:"Low",height:0.55},
- {time:"2026-09-28T23:12:00",type:"High",height:2.46}
-];
-
-
-/* PROFILE */
+/* ==========================================
+   PROFILE
+========================================== */
 
 function loadProfile(){
 
  try{
 
-  const saved=localStorage.getItem("pooleWindProfile");
+  const saved=
+   localStorage.getItem("pooleWindV5");
 
-  if(saved)
-   return JSON.parse(saved);
+  if(saved){
+
+   return {
+    ...DEFAULT_PROFILE,
+    ...JSON.parse(saved)
+   };
+
+  }
 
  }catch(e){}
 
- return JSON.parse(JSON.stringify(DEFAULT_PROFILE));
-}
-
-function saveProfile(){
-
- localStorage.setItem(
-  "pooleWindProfile",
-  JSON.stringify(profile)
+ return JSON.parse(
+  JSON.stringify(DEFAULT_PROFILE)
  );
 }
 
+
+function saveProfile(){
+
+ try{
+
+  localStorage.setItem(
+   "pooleWindV5",
+   JSON.stringify(profile)
+  );
+
+ }catch(e){}
+
+}
+
+
 function profileText(){
 
- const sports=
-  profile.sport==="both"
-  ? "Wing + Parawing"
-  : profile.sport==="parawing"
-  ? "Parawing"
-  : "Wing";
+ return (
+  `${profile.weight}kg · `+
+  `Wing ${profile.wingLitres}L / `+
+  `${profile.wingFoil} ${profile.wingFoilSize} · `+
+  `Foil Drive ${profile.fdLitres}L / `+
+  `${profile.fdFoil} ${profile.fdFoilSize}`
+ );
 
- return `${sports} · ${profile.weight}kg · `+
-        `${profile.boardLitres}L · `+
-        `${profile.foilName} ${profile.foilSize}`;
 }
 
 
-/* UTILITIES */
+/* ==========================================
+   GENERAL HELPERS
+========================================== */
 
-function compass(d){
+function compass(degrees){
 
- const dirs=["N","NE","E","SE","S","SW","W","NW"];
+ if(
+  degrees===null ||
+  degrees===undefined
+ )return "—";
 
- return dirs[
-  Math.round(d/45)%8
+ const directions=[
+  "N","NE","E","SE",
+  "S","SW","W","NW"
  ];
+
+ return directions[
+  Math.round(degrees/45)%8
+ ];
+
 }
+
 
 function hhmm(date){
 
  return date.toLocaleTimeString(
   "en-GB",
-  {hour:"2-digit",minute:"2-digit"}
- );
-}
-
-function kitForWind(list,wind){
-
- const matches=list.filter(
-  x=>wind>=Number(x.min) &&
-     wind<=Number(x.max)
+  {
+   hour:"2-digit",
+   minute:"2-digit"
+  }
  );
 
- if(!matches.length)
-  return null;
-
- return matches[0];
 }
 
-function recommendation(wind){
 
- let options=[];
+function formatCountdown(ms){
 
- if(
-  profile.sport==="wing" ||
-  profile.sport==="both"
- ){
+ const mins=
+  Math.max(
+   0,
+   Math.round(ms/60000)
+  );
 
-  const wing=
-   kitForWind(profile.wings,wind);
+ const hours=
+  Math.floor(mins/60);
 
-  if(wing)
-   options.push({
-    sport:"WING",
-    kit:wing.name
-   });
- }
+ const minutes=
+  mins%60;
 
- if(
-  profile.sport==="parawing" ||
-  profile.sport==="both"
- ){
+ if(hours===0)
+  return `${minutes} min`;
 
-  const para=
-   kitForWind(profile.paras,wind);
+ return `${hours}h ${minutes}m`;
 
-  if(para)
-   options.push({
-    sport:"PARAWING",
-    kit:para.name
-   });
- }
-
- return options;
 }
 
-function stateFor(wind,gust){
 
- const recs=recommendation(wind);
+/* ==========================================
+   WING / PARAWING LOGIC
+========================================== */
+
+function matchingKit(list,wind){
+
+ return list.find(
+  item=>
+   wind>=Number(item.min) &&
+   wind<=Number(item.max)
+ ) || null;
+
+}
+
+
+function windRecommendations(wind){
+
+ const output=[];
+
+ const wing=
+  matchingKit(
+   profile.wings,
+   wind
+  );
+
+ const para=
+  matchingKit(
+   profile.paras,
+   wind
+  );
+
+
+ if(wing){
+
+  output.push({
+   sport:"WING",
+   kit:wing.name
+  });
+
+ }
+
+
+ if(para){
+
+  output.push({
+   sport:"PARAWING",
+   kit:para.name
+  });
+
+ }
+
+
+ return output;
+
+}
+
+
+function windState(wind,gust){
+
+ const recs=
+  windRecommendations(wind);
 
  if(!recs.length)
   return "no";
@@ -551,437 +657,1194 @@ function stateFor(wind,gust){
   return "maybe";
 
  return "go";
-}
 
-function stateLabel(state){
-
- if(state==="go") return "GO";
- if(state==="maybe") return "MAYBE";
-
- return "NO";
 }
 
 
-/* WEATHER */
+/* ==========================================
+   FOIL DRIVE LOGIC
+========================================== */
+
+function foilDriveState(
+ swell,
+ period,
+ wind
+){
+
+ if(
+  swell===null ||
+  swell===undefined ||
+  period===null ||
+  period===undefined
+ )
+  return "no";
+
+
+ if(
+  swell>=profile.fdMinSwell &&
+  period>=profile.fdMinPeriod
+ ){
+
+  if(wind>20)
+   return "maybe";
+
+  return "go";
+
+ }
+
+
+ if(
+  swell>=profile.fdMinSwell*0.8 &&
+  period>=profile.fdMinPeriod-1
+ )
+  return "maybe";
+
+
+ return "no";
+
+}
+
+
+function foilDriveScore(
+ swell,
+ period,
+ wind
+){
+
+ if(
+  swell===null ||
+  period===null
+ )
+  return -999;
+
+
+ let score=
+  (swell*10)+
+  (period*2);
+
+
+ if(wind<15)
+  score+=8;
+
+
+ if(wind>20)
+  score-=10;
+
+
+ return score;
+
+}
+
+
+/* ==========================================
+   WIND WEATHER API
+========================================== */
 
 async function getWeather(spot){
 
  const url=
- "https://api.open-meteo.com/v1/forecast"+
- "?latitude="+spot.lat+
- "&longitude="+spot.lon+
- "&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m"+
- "&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m"+
- "&wind_speed_unit=kn"+
- "&timezone=Europe%2FLondon"+
- "&forecast_days=1";
-
- const r=await fetch(url);
-
- if(!r.ok)
-  throw new Error("Weather unavailable");
-
- return r.json();
-}
-
-
-async function getMarine(spot){
-
- if(spot.type==="wing")
-  return null;
-
- try{
-
-  const url=
-  "https://marine-api.open-meteo.com/v1/marine"+
-  "?latitude="+spot.lat+
-  "&longitude="+spot.lon+
-  "&current=wave_height,wave_direction,wave_period,"+
-  "swell_wave_height,swell_wave_direction,swell_wave_period"+
+  "https://api.open-meteo.com/v1/forecast"+
+  `?latitude=${spot.lat}`+
+  `&longitude=${spot.lon}`+
+  "&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m"+
+  "&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m"+
+  "&wind_speed_unit=kn"+
   "&timezone=Europe%2FLondon"+
   "&forecast_days=1";
 
-  const r=await fetch(url);
 
-  if(!r.ok)
-   return null;
+ const response=
+  await fetch(url);
 
-  return r.json();
 
- }catch(e){
+ if(!response.ok)
+  throw new Error(
+   "Weather unavailable"
+  );
 
-  return null;
- }
+
+ return response.json();
+
 }
 
 
-function futureHours(weather){
+/* ==========================================
+   MARINE / SWELL API
+========================================== */
 
- const now=new Date();
- const result=[];
+async function getMarine(spot){
+
+ if(!spot.marine)
+  return null;
+
+
+ const url=
+  "https://marine-api.open-meteo.com/v1/marine"+
+  `?latitude=${spot.lat}`+
+  `&longitude=${spot.lon}`+
+  "&current=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period"+
+  "&hourly=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period"+
+  "&timezone=Europe%2FLondon"+
+  "&forecast_days=1";
+
+
+ try{
+
+  const response=
+   await fetch(url);
+
+
+  if(!response.ok)
+   return null;
+
+
+  return await response.json();
+
+
+ }catch(error){
+
+  console.error(
+   "Marine error",
+   error
+  );
+
+  return null;
+
+ }
+
+}
+
+
+/* ==========================================
+   AUTOMATIC POOLE MODEL TIDES
+========================================== */
+
+async function getPooleTides(){
+
+ const url=
+  "https://marine-api.open-meteo.com/v1/marine"+
+  "?latitude=50.700"+
+  "&longitude=-1.995"+
+  "&hourly=sea_level_height_msl"+
+  "&timezone=Europe%2FLondon"+
+  "&forecast_days=2";
+
+
+ try{
+
+  const response=
+   await fetch(url);
+
+
+  if(!response.ok)
+   throw new Error(
+    "Tide unavailable"
+   );
+
+
+  const data=
+   await response.json();
+
+
+  return calculateTides(data);
+
+
+ }catch(error){
+
+  console.error(
+   "Tide error",
+   error
+  );
+
+
+  return null;
+
+ }
+
+}
+
+
+function calculateTides(data){
+
+ if(
+  !data ||
+  !data.hourly ||
+  !data.hourly.time ||
+  !data.hourly.sea_level_height_msl
+ )
+  return null;
+
+
+ const times=
+  data.hourly.time;
+
+ const heights=
+  data.hourly.sea_level_height_msl;
+
+ const events=[];
+
 
  for(
-  let i=0;
-  i<weather.hourly.time.length;
+  let i=1;
+  i<heights.length-1;
   i++
  ){
 
-  const time=
-   new Date(weather.hourly.time[i]);
+  const before=
+   heights[i-1];
 
-  if(time>=now){
+  const current=
+   heights[i];
 
-   result.push({
+  const after=
+   heights[i+1];
 
-    time,
 
-    wind:Math.round(
-     weather.hourly.wind_speed_10m[i]
-    ),
+  if(
+   before===null ||
+   current===null ||
+   after===null
+  )
+   continue;
 
-    gust:Math.round(
-     weather.hourly.wind_gusts_10m[i]
-    ),
 
-    dir:compass(
-     weather.hourly.wind_direction_10m[i]
-    )
+  /* HIGH WATER */
+
+  if(
+   current>before &&
+   current>=after
+  ){
+
+   events.push({
+
+    type:"High",
+
+    time:
+     new Date(times[i]),
+
+    modelHeight:
+     Number(current)
 
    });
+
   }
+
+
+  /* LOW WATER */
+
+  if(
+   current<before &&
+   current<=after
+  ){
+
+   events.push({
+
+    type:"Low",
+
+    time:
+     new Date(times[i]),
+
+    modelHeight:
+     Number(current)
+
+   });
+
+  }
+
  }
 
- return result;
+
+ events.sort(
+  (a,b)=>
+   a.time-b.time
+ );
+
+
+ return events;
+
 }
 
 
-/* TIDES */
+/* ==========================================
+   TIDE DISPLAY
+========================================== */
 
-function tideInfo(){
+function renderTides(events){
 
- const now=new Date();
+ const main=
+  document.getElementById(
+   "tideMain"
+  );
 
- let previous=null;
- let next=null;
+ const sub=
+  document.getElementById(
+   "tideSub"
+  );
 
- tides.forEach(t=>{
 
-  const date=new Date(t.time);
+ if(
+  !events ||
+  !events.length
+ ){
 
-  if(date<=now)
-   previous={...t,date};
+  main.textContent=
+   "Tide forecast unavailable";
 
-  if(date>now && !next)
-   next={...t,date};
- });
+  sub.textContent=
+   "Check Windguru or Poole Harbour tide information.";
 
- if(!next){
+  return;
 
-  return {
-   main:"Today's final tide event has passed",
-   sub:"Check tomorrow's Poole tide table."
-  };
  }
 
- let movement="";
+
+ const now=
+  new Date();
+
+
+ const nextIndex=
+  events.findIndex(
+   event=>
+    event.time>now
+  );
+
+
+ if(nextIndex===-1){
+
+  main.textContent=
+   "No next tide found";
+
+  sub.textContent=
+   "Check Windguru / Poole Harbour.";
+
+  return;
+
+ }
+
+
+ const next=
+  events[nextIndex];
+
+
+ const previous=
+  nextIndex>0
+  ? events[nextIndex-1]
+  : null;
+
+
+ const following=
+  events[nextIndex+1] ||
+  null;
+
+
+ let movement;
+
 
  if(previous){
 
   movement=
    previous.type==="Low" &&
    next.type==="High"
-   ? "Rising"
-   : "Falling";
+   ? "↑ RISING"
+   : "↓ FALLING";
+
+ }else{
+
+  movement=
+   next.type==="High"
+   ? "↑ RISING"
+   : "↓ FALLING";
+
  }
 
- return {
 
-  main:
-   `${movement} · Next ${next.type} `+
-   `${hhmm(next.date)}`,
+ main.textContent=
+  `${movement} · Next ${next.type} ${hhmm(next.time)}`;
 
-  sub:
-   `${next.height.toFixed(2)} m · `+
-   `Poole Harbour prediction`
- };
+
+ let details=
+  `${formatCountdown(
+   next.time-now
+  )} until ${
+   next.type.toLowerCase()
+  } water`;
+
+
+ if(following){
+
+  details+=
+   ` · Then ${following.type} ${hhmm(following.time)}`;
+
+ }
+
+
+ sub.textContent=
+  details;
+
 }
 
 
-/* BEST SESSION */
+/* ==========================================
+   COMBINE HOURLY WIND + SWELL
+========================================== */
 
-function findBest(data){
+function combineHours(
+ weather,
+ marine
+){
 
- let candidates=[];
+ const now=
+  new Date();
 
- data
- .filter(x=>x.spot.type!=="surf")
- .forEach(item=>{
+ const rows=[];
 
-  item.hours.forEach((h,index)=>{
+
+ weather.hourly.time.forEach(
+  (timeString,index)=>{
+
+   const time=
+    new Date(timeString);
+
+
+   if(time<now)
+    return;
+
+
+   let marineIndex=-1;
+
+
+   if(
+    marine &&
+    marine.hourly &&
+    marine.hourly.time
+   ){
+
+    marineIndex=
+     marine.hourly.time.indexOf(
+      timeString
+     );
+
+   }
+
+
+   rows.push({
+
+    time:time,
+
+    wind:
+     Math.round(
+      weather.hourly.wind_speed_10m[index]
+     ),
+
+    gust:
+     Math.round(
+      weather.hourly.wind_gusts_10m[index]
+     ),
+
+    dir:
+     compass(
+      weather.hourly.wind_direction_10m[index]
+     ),
+
+    swell:
+     marineIndex>=0
+     ? marine.hourly.swell_wave_height?.[marineIndex]
+     : null,
+
+    swellPeriod:
+     marineIndex>=0
+     ? marine.hourly.swell_wave_period?.[marineIndex]
+     : null,
+
+    swellDirection:
+     marineIndex>=0
+     ? marine.hourly.swell_wave_direction?.[marineIndex]
+     : null,
+
+    wave:
+     marineIndex>=0
+     ? marine.hourly.wave_height?.[marineIndex]
+     : null,
+
+    wavePeriod:
+     marineIndex>=0
+     ? marine.hourly.wave_period?.[marineIndex]
+     : null
+
+   });
+
+  }
+ );
+
+
+ return rows;
+
+}
+
+
+/* ==========================================
+   BEST WIND SESSION
+========================================== */
+
+function bestWindSession(){
+
+ const choices=[];
+
+
+ latestData.forEach(item=>{
+
+  if(
+   !item.spot.sports.includes("Wing") &&
+   !item.spot.sports.includes("Parawing")
+  )
+   return;
+
+
+  item.hours.forEach(hour=>{
 
    const recs=
-    recommendation(h.wind);
+    windRecommendations(
+     hour.wind
+    );
+
 
    if(!recs.length)
     return;
 
-   let score=h.wind;
 
-   if(h.gust-h.wind<10)
-    score+=10;
+   let score=
+    30-
+    Math.abs(
+     18-hour.wind
+    );
 
-   candidates.push({
-    spot:item.spot.name,
-    index,
-    ...h,
-    recs,
-    score
+
+   if(
+    hour.gust-hour.wind<10
+   )
+    score+=5;
+
+
+   choices.push({
+
+    spot:
+     item.spot.name,
+
+    ...hour,
+
+    recs:recs,
+
+    score:score
+
    });
 
   });
+
  });
 
- if(!candidates.length)
-  return null;
 
- candidates.sort(
-  (a,b)=>b.score-a.score
+ choices.sort(
+  (a,b)=>
+   b.score-a.score
  );
 
- const best=candidates[0];
 
- const spot=
-  data.find(
-   x=>x.spot.name===best.spot
-  );
+ return choices[0] || null;
 
- let start=best.index;
- let end=best.index;
-
- while(
-  start>0 &&
-  recommendation(
-   spot.hours[start-1].wind
-  ).length
- )
-  start--;
-
- while(
-  end<spot.hours.length-1 &&
-  recommendation(
-   spot.hours[end+1].wind
-  ).length
- )
-  end++;
-
- return {
-  ...best,
-  start:spot.hours[start],
-  end:spot.hours[end]
- };
 }
 
 
-/* CARDS */
+/* ==========================================
+   BEST FOIL DRIVE SESSION
+========================================== */
+
+function bestFoilSession(){
+
+ const choices=[];
+
+
+ latestData.forEach(item=>{
+
+  /*
+   Kimmeridge does NOT have
+   "Foil Drive" in its sports list.
+   It therefore cannot appear here.
+  */
+
+  if(
+   !item.spot.sports.includes(
+    "Foil Drive"
+   )
+  )
+   return;
+
+
+  item.hours.forEach(hour=>{
+
+   const state=
+    foilDriveState(
+     hour.swell,
+     hour.swellPeriod,
+     hour.wind
+    );
+
+
+   if(state==="no")
+    return;
+
+
+   choices.push({
+
+    spot:
+     item.spot.name,
+
+    ...hour,
+
+    state:state,
+
+    score:
+     foilDriveScore(
+      hour.swell,
+      hour.swellPeriod,
+      hour.wind
+     )
+
+   });
+
+  });
+
+ });
+
+
+ choices.sort(
+  (a,b)=>
+   b.score-a.score
+ );
+
+
+ return choices[0] || null;
+
+}
+
+
+/* ==========================================
+   SPOT CARDS
+========================================== */
 
 function cardHTML(item){
 
- const c=item.weather.current;
+ const current=
+  item.weather.current;
+
 
  const wind=
-  Math.round(c.wind_speed_10m);
+  Math.round(
+   current.wind_speed_10m
+  );
+
 
  const gust=
-  Math.round(c.wind_gusts_10m);
+  Math.round(
+   current.wind_gusts_10m
+  );
 
- const dir=
-  compass(c.wind_direction_10m);
 
- const state=
-  item.spot.type==="surf"
-  ? "maybe"
-  : stateFor(wind,gust);
+ const direction=
+  compass(
+   current.wind_direction_10m
+  );
 
- const recs=
-  recommendation(wind);
 
- let wave="—";
- let marineText="";
+ const marine=
+  item.marine?.current;
+
+
+ const swell=
+  marine?.swell_wave_height;
+
+
+ const period=
+  marine?.swell_wave_period;
+
+
+ const swellDirection=
+  marine?.swell_wave_direction;
+
+
+ const wave=
+  marine?.wave_height;
+
+
+ const wavePeriod=
+  marine?.wave_period;
+
+
+ let primaryState="maybe";
+
 
  if(
-  item.marine &&
-  item.marine.current
+  item.spot.sports.includes(
+   "Foil Drive"
+  )
  ){
 
-  const m=item.marine.current;
+  primaryState=
+   foilDriveState(
+    swell,
+    period,
+    wind
+   );
 
-  if(m.wave_height!=null)
-   wave=
-    Number(m.wave_height)
-    .toFixed(1)+"m";
+ }
+ else if(
+  item.spot.sports.includes(
+   "Wing"
+  )
+ ){
 
-  if(item.spot.type==="surf"){
+  primaryState=
+   windState(
+    wind,
+    gust
+   );
 
-   marineText=
-    `Wave ${wave}`;
-
-   if(m.wave_period!=null)
-    marineText+=
-     ` @ ${Math.round(m.wave_period)}s`;
-
-   if(m.wave_direction!=null)
-    marineText+=
-     ` from ${compass(m.wave_direction)}`;
-  }
  }
 
- let gear="";
 
- if(item.spot.type==="surf"){
+ /*
+  Kimmeridge is deliberately
+  surf-only.
+ */
 
-  gear="Surf forecast";
+ if(
+  item.spot.name==="Kimmeridge"
+ ){
 
- }else if(recs.length){
+  primaryState="maybe";
 
-  gear=
-   recs.map(
-    x=>`${x.sport}: ${x.kit}`
+ }
+
+
+ const windRecs=
+  windRecommendations(
+   wind
+  );
+
+
+ let recommendation="";
+
+
+ if(
+  item.spot.sports.includes(
+   "Wing"
+  ) &&
+  windRecs.length
+ ){
+
+  recommendation+=
+   windRecs.map(
+    rec=>
+     `${rec.sport}: ${rec.kit}`
    ).join(" · ");
 
- }else{
-
-  gear=
-   "No matching kit in your setup";
  }
 
- const hours=
-  item.hours
-  .slice(0,8)
-  .map(h=>{
 
-   const s=
-    stateFor(h.wind,h.gust);
+ if(
+  item.spot.sports.includes(
+   "Foil Drive"
+  )
+ ){
 
-   const cls=
-    s==="go"
-    ? "goHour"
-    : s==="maybe"
-    ? "maybeHour"
-    : "";
+  const fdState=
+   foilDriveState(
+    swell,
+    period,
+    wind
+   );
 
-   const r=
-    recommendation(h.wind);
 
-   const kit=
-    r.length
-    ? r.map(x=>x.kit).join(" / ")
-    : "—";
+  if(recommendation)
+   recommendation+="<br>";
 
-   return `
-    <div class="hour ${cls}">
 
-     <div class="hourTime">
-      ${hhmm(h.time)}
+  recommendation+=
+   `FOIL DRIVE: ${fdState.toUpperCase()} · `+
+   `${profile.fdBoard} ${profile.fdLitres}L · `+
+   `${profile.fdFoil} ${profile.fdFoilSize}`;
+
+ }
+
+
+ if(
+  item.spot.name==="Kimmeridge"
+ ){
+
+  recommendation=
+   "<strong>SURF ONLY</strong> · No foiling recommendation";
+
+ }
+
+
+ if(!recommendation){
+
+  recommendation=
+   "No matching setup right now";
+
+ }
+
+
+ let swellHTML="";
+
+
+ if(item.spot.marine){
+
+  swellHTML=`
+
+   <div class="swellBox">
+
+    <div class="swellTitle">
+     🌊 Swell
+    </div>
+
+    <div class="swellGrid">
+
+     <div class="swellMetric">
+
+      <div class="swellValue">
+       ${
+        swell!=null
+        ? Number(swell).toFixed(1)+"m"
+        : "—"
+       }
+      </div>
+
+      <div class="swellLabel">
+       SWELL
+      </div>
+
      </div>
 
-     <div class="hourWind">
-      ${h.wind}kt
+
+     <div class="swellMetric">
+
+      <div class="swellValue">
+       ${
+        period!=null
+        ? Math.round(period)+"s"
+        : "—"
+       }
+      </div>
+
+      <div class="swellLabel">
+       PERIOD
+      </div>
+
      </div>
 
-     <div class="hourSmall">
-      ${h.dir} · G${h.gust}
-     </div>
 
-     <div class="hourSmall">
-      ${kit}
+     <div class="swellMetric">
+
+      <div class="swellValue">
+       ${
+        swellDirection!=null
+        ? compass(swellDirection)
+        : "—"
+       }
+      </div>
+
+      <div class="swellLabel">
+       DIRECTION
+      </div>
+
      </div>
 
     </div>
+
+
+    <div style="
+     margin-top:10px;
+     color:var(--muted);
+     font-size:12px
+    ">
+
+     Total waves:
+     ${
+      wave!=null
+      ? Number(wave).toFixed(1)+"m"
+      : "—"
+     }
+
+     ${
+      wavePeriod!=null
+      ? " @ "+Math.round(wavePeriod)+"s"
+      : ""
+     }
+
+    </div>
+
+   </div>
+
+  `;
+
+ }
+
+
+ const hours=
+  item.hours
+  .slice(0,9)
+  .map(hour=>{
+
+
+   let state;
+
+
+   if(
+    item.spot.sports.includes(
+     "Foil Drive"
+    )
+   ){
+
+    state=
+     foilDriveState(
+      hour.swell,
+      hour.swellPeriod,
+      hour.wind
+     );
+
+   }else{
+
+    state=
+     windState(
+      hour.wind,
+      hour.gust
+     );
+
+   }
+
+
+   const cssClass=
+    state==="go"
+    ? "goHour"
+    : state==="maybe"
+    ? "maybeHour"
+    : "";
+
+
+   let detail="";
+
+
+   if(
+    item.spot.marine &&
+    hour.swell!=null
+   ){
+
+    detail=
+     `${Number(
+      hour.swell
+     ).toFixed(1)}m`;
+
+
+    if(
+     hour.swellPeriod!=null
+    ){
+
+     detail+=
+      ` @ ${Math.round(
+       hour.swellPeriod
+      )}s`;
+
+    }
+
+   }else{
+
+    const rec=
+     windRecommendations(
+      hour.wind
+     );
+
+
+    detail=
+     rec.length
+     ? rec.map(
+        x=>x.kit
+       ).join("/")
+     : "—";
+
+   }
+
+
+   return `
+
+    <div class="hour ${cssClass}">
+
+     <div class="hourTime">
+      ${hhmm(hour.time)}
+     </div>
+
+     <div class="hourWind">
+      ${hour.wind}kt
+     </div>
+
+     <div class="hourSmall">
+      ${hour.dir} · G${hour.gust}
+     </div>
+
+     <div class="hourSmall">
+      ${detail}
+     </div>
+
+    </div>
+
    `;
-  }).join("");
+
+  })
+  .join("");
+
 
  return `
-  <div class="card" data-card="${item.spot.name}">
+
+  <div
+   class="card"
+   data-card="${item.spot.name}"
+  >
 
    <div class="cardTop">
 
     <div>
-     <h2>${item.spot.name}</h2>
-     <div class="source">MODEL NOW</div>
+
+     <h2>
+      ${item.spot.name}
+     </h2>
+
+     <div class="source">
+      MODEL FORECAST
+     </div>
+
+     <div class="sports">
+      ${item.spot.sports.join(" · ")}
+     </div>
+
     </div>
 
-    <div class="badge ${state}">
-     ${stateLabel(state)}
+
+    <div class="badge ${primaryState}">
+     ${primaryState.toUpperCase()}
     </div>
 
    </div>
+
 
    <div class="grid">
 
     <div class="metric">
-     <div class="value">${wind}kt</div>
-     <div class="label">WIND</div>
+
+     <div class="value">
+      ${wind}kt
+     </div>
+
+     <div class="label">
+      WIND
+     </div>
+
     </div>
 
-    <div class="metric">
-     <div class="value">${gust}kt</div>
-     <div class="label">GUST</div>
-    </div>
 
     <div class="metric">
-     <div class="value">${dir}</div>
-     <div class="label">DIRECTION</div>
+
+     <div class="value">
+      ${gust}kt
+     </div>
+
+     <div class="label">
+      GUST
+     </div>
+
     </div>
 
+
     <div class="metric">
-     <div class="value">${wave}</div>
-     <div class="label">SEA</div>
+
+     <div class="value">
+      ${direction}
+     </div>
+
+     <div class="label">
+      WIND DIRECTION
+     </div>
+
+    </div>
+
+
+    <div class="metric">
+
+     <div class="value">
+      ${
+       wave!=null
+       ? Number(wave).toFixed(1)+"m"
+       : "—"
+      }
+     </div>
+
+     <div class="label">
+      WAVE HEIGHT
+     </div>
+
     </div>
 
    </div>
 
-   <div class="reason">
-    ${
-     item.spot.type==="surf"
-     ? marineText
-     : `${wind}kt sustained · gusting ${gust}kt`
-    }
-   </div>
+
+   ${swellHTML}
+
 
    <div class="gear">
-    <strong>Recommended:</strong> ${gear}
+
+    <strong>
+     Recommended
+    </strong>
+
     <br>
-    <span style="color:var(--muted)">
-     ${profile.boardLitres}L ${profile.boardName}
-     · ${profile.foilName} ${profile.foilSize}
-    </span>
+
+    ${recommendation}
+
    </div>
+
 
    <div class="hours">
     ${hours}
    </div>
 
   </div>
+
  `;
+
 }
 
 
-/* RENDER */
+/* ==========================================
+   MAIN RENDER
+========================================== */
 
 function render(){
 
  document.getElementById(
   "profileSummary"
- ).textContent=profileText();
+ ).textContent=
+  profileText();
+
 
  document.getElementById(
   "cards"
  ).innerHTML=
-  latestData.map(cardHTML).join("");
+  latestData
+   .map(cardHTML)
+   .join("");
 
- document
- .querySelectorAll("[data-card]")
- .forEach(card=>{
+
+ document.querySelectorAll(
+  "[data-card]"
+ ).forEach(card=>{
 
   card.style.display=
    selectedSpot==="All" ||
@@ -991,261 +1854,368 @@ function render(){
 
  });
 
- const best=findBest(latestData);
 
- const strongest=
-  latestData
-  .filter(x=>x.spot.type!=="surf")
-  .map(x=>({
+ const bestWind=
+  bestWindSession();
 
-   name:x.spot.name,
 
-   wind:Math.round(
-    x.weather.current.wind_speed_10m
-   ),
+ if(bestWind){
 
-   gust:Math.round(
-    x.weather.current.wind_gusts_10m
-   )
+  document.getElementById(
+   "bestWind"
+  ).textContent=
+   `${bestWind.spot} · ${hhmm(bestWind.time)}`;
 
-  }))
-  .sort(
-   (a,b)=>b.wind-a.wind
-  )[0];
 
- const currentState=
-  stateFor(
-   strongest.wind,
-   strongest.gust
+  document.getElementById(
+   "bestWindSub"
+  ).textContent=
+   `${bestWind.wind}kt ${bestWind.dir} · `+
+   `gusting ${bestWind.gust}kt · `+
+   bestWind.recs.map(
+    x=>
+     `${x.sport} ${x.kit}`
+   ).join(" / ");
+
+ }else{
+
+  document.getElementById(
+   "bestWind"
+  ).textContent=
+   "No matching wind session";
+
+
+  document.getElementById(
+   "bestWindSub"
+  ).textContent=
+   "Forecast does not currently match your saved wind ranges.";
+
+ }
+
+
+ const bestFoil=
+  bestFoilSession();
+
+
+ if(bestFoil){
+
+  document.getElementById(
+   "bestFoil"
+  ).textContent=
+   `${bestFoil.spot} · ${hhmm(bestFoil.time)}`;
+
+
+  document.getElementById(
+   "bestFoilSub"
+  ).textContent=
+   `${Number(
+    bestFoil.swell
+   ).toFixed(1)}m @ `+
+   `${Math.round(
+    bestFoil.swellPeriod
+   )}s `+
+   `${compass(
+    bestFoil.swellDirection
+   )} · `+
+   `${bestFoil.wind}kt wind · `+
+   `${profile.fdFoil} ${profile.fdFoilSize}`;
+
+ }else{
+
+  document.getElementById(
+   "bestFoil"
+  ).textContent=
+   "No Foil Drive window showing";
+
+
+  document.getElementById(
+   "bestFoilSub"
+  ).textContent=
+   "Swell does not currently meet your saved minimum.";
+
+ }
+
+
+ const heroBadge=
+  document.getElementById(
+   "heroBadge"
   );
 
- const badge=
-  document.getElementById("heroBadge");
 
- badge.className=
-  `badge ${currentState}`;
+ if(bestFoil || bestWind){
 
- badge.textContent=
-  stateLabel(currentState);
+  heroBadge.className=
+   "badge go";
 
- if(currentState==="go"){
+  heroBadge.textContent=
+   "GO";
 
-  document.getElementById(
-   "heroTitle"
-  ).textContent=
-   "Session conditions showing now";
-
-  document.getElementById(
-   "heroText"
-  ).textContent=
-   `${strongest.name}: `+
-   `${strongest.wind}kt · `+
-   `gusting ${strongest.gust}kt`;
-
- }else if(currentState==="maybe"){
 
   document.getElementById(
    "heroTitle"
   ).textContent=
-   "Marginal conditions right now";
+   "There's a session showing today";
 
-  document.getElementById(
-   "heroText"
-  ).textContent=
-   "Check your setup and the hourly forecast.";
+
+  if(bestFoil){
+
+   document.getElementById(
+    "heroText"
+   ).textContent=
+    `Foil Drive opportunity at ${bestFoil.spot}`;
+
+  }else{
+
+   document.getElementById(
+    "heroText"
+   ).textContent=
+    `Wind session at ${bestWind.spot}`;
+
+  }
 
  }else{
 
+  heroBadge.className=
+   "badge no";
+
+  heroBadge.textContent=
+   "NO";
+
+
   document.getElementById(
    "heroTitle"
   ).textContent=
-   "No session right now";
+   "No clear session showing";
+
 
   document.getElementById(
    "heroText"
   ).textContent=
-   "Checking later today for your equipment.";
+   "Conditions are outside your saved ranges.";
+
  }
 
- const kitPill=
-  document.getElementById("kitPill");
 
- if(best){
+ renderTides(
+  latestTides
+ );
 
-  document.getElementById(
-   "bestMain"
-  ).textContent=
-   `${best.spot} · `+
-   `${hhmm(best.start.time)}–`+
-   `${hhmm(best.end.time)}`;
-
-  document.getElementById(
-   "bestSub"
-  ).textContent=
-   `Peak ${best.wind}kt ${best.dir} · `+
-   `gusting ${best.gust}kt`;
-
-  kitPill.innerHTML=
-   best.recs.map(
-    x=>
-    `<span class="kitPill">
-      ${x.sport} · ${x.kit}
-     </span>`
-   ).join(" ");
-
- }else{
-
-  document.getElementById(
-   "bestMain"
-  ).textContent=
-   "NO MATCHING SESSION TODAY";
-
-  document.getElementById(
-   "bestSub"
-  ).textContent=
-   "Today's forecast does not match your saved wind ranges.";
-
-  kitPill.innerHTML="";
- }
-
- const tide=tideInfo();
-
- document.getElementById(
-  "tideMain"
- ).textContent=tide.main;
-
- document.getElementById(
-  "tideSub"
- ).textContent=tide.sub;
 }
 
 
-/* SETTINGS UI */
+/* ==========================================
+   SETTINGS UI
+========================================== */
 
-function rangeRow(item,type){
+function rangeRow(item){
 
- const row=document.createElement("div");
+ const row=
+  document.createElement(
+   "div"
+  );
 
- row.className="rangeRow";
+
+ row.className=
+  "rangeRow";
+
 
  row.innerHTML=`
 
-  <div class="field rangeName">
-   <label>Size</label>
+  <div class="field">
+
+   <label>
+    Size
+   </label>
+
    <input
-    type="text"
+    class="rName"
     value="${item.name}"
-    data-type="${type}"
-    data-field="name">
+   >
+
   </div>
 
+
   <div class="field">
-   <label>Min kt</label>
+
+   <label>
+    Min kt
+   </label>
+
    <input
+    class="rMin"
     type="number"
     value="${item.min}"
-    data-type="${type}"
-    data-field="min">
+   >
+
   </div>
 
+
   <div class="field">
-   <label>Max kt</label>
+
+   <label>
+    Max kt
+   </label>
+
    <input
+    class="rMax"
     type="number"
     value="${item.max}"
-    data-type="${type}"
-    data-field="max">
+   >
+
   </div>
 
  `;
 
+
  return row;
+
+}
+
+
+function fillRanges(
+ id,
+ list
+){
+
+ const box=
+  document.getElementById(id);
+
+
+ box.innerHTML="";
+
+
+ list.forEach(
+  item=>
+   box.appendChild(
+    rangeRow(item)
+   )
+ );
+
 }
 
 
 function populateSetup(){
 
- document.getElementById("sport").value=
-  profile.sport;
-
- document.getElementById("weight").value=
+ document.getElementById(
+  "weight"
+ ).value=
   profile.weight;
 
- document.getElementById("boardName").value=
-  profile.boardName;
 
- document.getElementById("boardLitres").value=
-  profile.boardLitres;
+ document.getElementById(
+  "wingBoard"
+ ).value=
+  profile.wingBoard;
 
- document.getElementById("foilName").value=
-  profile.foilName;
 
- document.getElementById("foilSize").value=
-  profile.foilSize;
+ document.getElementById(
+  "wingLitres"
+ ).value=
+  profile.wingLitres;
 
- const wings=
-  document.getElementById("wingRanges");
 
- wings.innerHTML="";
+ document.getElementById(
+  "wingFoil"
+ ).value=
+  profile.wingFoil;
 
- profile.wings.forEach(
-  x=>wings.appendChild(
-   rangeRow(x,"wing")
-  )
+
+ document.getElementById(
+  "wingFoilSize"
+ ).value=
+  profile.wingFoilSize;
+
+
+ document.getElementById(
+  "fdBoard"
+ ).value=
+  profile.fdBoard;
+
+
+ document.getElementById(
+  "fdLitres"
+ ).value=
+  profile.fdLitres;
+
+
+ document.getElementById(
+  "fdFoil"
+ ).value=
+  profile.fdFoil;
+
+
+ document.getElementById(
+  "fdFoilSize"
+ ).value=
+  profile.fdFoilSize;
+
+
+ document.getElementById(
+  "fdMinSwell"
+ ).value=
+  profile.fdMinSwell;
+
+
+ document.getElementById(
+  "fdMinPeriod"
+ ).value=
+  profile.fdMinPeriod;
+
+
+ fillRanges(
+  "wingRanges",
+  profile.wings
  );
 
- const paras=
-  document.getElementById("paraRanges");
 
- paras.innerHTML="";
-
- profile.paras.forEach(
-  x=>paras.appendChild(
-   rangeRow(x,"para")
-  )
+ fillRanges(
+  "paraRanges",
+  profile.paras
  );
+
 }
 
 
-function readRanges(type){
+function readRanges(id){
 
- const container=
-  type==="wing"
-  ? document.getElementById("wingRanges")
-  : document.getElementById("paraRanges");
-
- const rows=[
-  ...container.querySelectorAll(".rangeRow")
- ];
-
- return rows.map(row=>({
+ return [
+  ...document.querySelectorAll(
+   `#${id} .rangeRow`
+  )
+ ]
+ .map(row=>({
 
   name:
    row.querySelector(
-    '[data-field="name"]'
+    ".rName"
    ).value.trim(),
 
   min:
    Number(
     row.querySelector(
-     '[data-field="min"]'
+     ".rMin"
     ).value
    ),
 
   max:
    Number(
     row.querySelector(
-     '[data-field="max"]'
+     ".rMax"
     ).value
    )
 
- })).filter(
-  x=>x.name &&
-     Number.isFinite(x.min) &&
-     Number.isFinite(x.max)
+ }))
+ .filter(
+  item=>
+   item.name &&
+   Number.isFinite(item.min) &&
+   Number.isFinite(item.max)
  );
+
 }
 
+
+/* OPEN SETTINGS */
 
 document.getElementById(
  "openSetup"
@@ -1257,10 +2227,15 @@ document.getElementById(
 
   document.getElementById(
    "setupModal"
-  ).classList.add("open");
+  ).classList.add(
+   "open"
+  );
+
  }
 );
 
+
+/* CLOSE SETTINGS */
 
 document.getElementById(
  "closeSetup"
@@ -1270,10 +2245,15 @@ document.getElementById(
 
   document.getElementById(
    "setupModal"
-  ).classList.remove("open");
+  ).classList.remove(
+   "open"
+  );
+
  }
 );
 
+
+/* ADD WING */
 
 document.getElementById(
  "addWing"
@@ -1284,14 +2264,20 @@ document.getElementById(
   document.getElementById(
    "wingRanges"
   ).appendChild(
-   rangeRow(
-    {name:"",min:10,max:20},
-    "wing"
-   )
+
+   rangeRow({
+    name:"",
+    min:10,
+    max:20
+   })
+
   );
+
  }
 );
 
+
+/* ADD PARAWING */
 
 document.getElementById(
  "addPara"
@@ -1302,14 +2288,20 @@ document.getElementById(
   document.getElementById(
    "paraRanges"
   ).appendChild(
-   rangeRow(
-    {name:"",min:8,max:18},
-    "para"
-   )
+
+   rangeRow({
+    name:"",
+    min:8,
+    max:18
+   })
+
   );
+
  }
 );
 
+
+/* SAVE SETTINGS */
 
 document.getElementById(
  "saveSetup"
@@ -1319,11 +2311,6 @@ document.getElementById(
 
   profile={
 
-   sport:
-    document.getElementById(
-     "sport"
-    ).value,
-
    weight:
     Number(
      document.getElementById(
@@ -1331,47 +2318,110 @@ document.getElementById(
      ).value
     ) || 80,
 
-   boardName:
+
+   wingBoard:
     document.getElementById(
-     "boardName"
+     "wingBoard"
     ).value.trim() || "Board",
 
-   boardLitres:
+
+   wingLitres:
     Number(
      document.getElementById(
-      "boardLitres"
+      "wingLitres"
      ).value
     ) || 100,
 
-   foilName:
+
+   wingFoil:
     document.getElementById(
-     "foilName"
+     "wingFoil"
     ).value.trim() || "Foil",
 
-   foilSize:
+
+   wingFoilSize:
     Number(
      document.getElementById(
-      "foilSize"
+      "wingFoilSize"
      ).value
     ) || 1000,
 
+
    wings:
-    readRanges("wing"),
+    readRanges(
+     "wingRanges"
+    ),
+
 
    paras:
-    readRanges("para")
+    readRanges(
+     "paraRanges"
+    ),
+
+
+   fdBoard:
+    document.getElementById(
+     "fdBoard"
+    ).value.trim() || "Board",
+
+
+   fdLitres:
+    Number(
+     document.getElementById(
+      "fdLitres"
+     ).value
+    ) || 100,
+
+
+   fdFoil:
+    document.getElementById(
+     "fdFoil"
+    ).value.trim() || "Foil",
+
+
+   fdFoilSize:
+    Number(
+     document.getElementById(
+      "fdFoilSize"
+     ).value
+    ) || 1200,
+
+
+   fdMinSwell:
+    Number(
+     document.getElementById(
+      "fdMinSwell"
+     ).value
+    ) || 0.5,
+
+
+   fdMinPeriod:
+    Number(
+     document.getElementById(
+      "fdMinPeriod"
+     ).value
+    ) || 7
+
   };
+
 
   saveProfile();
 
+
   document.getElementById(
    "setupModal"
-  ).classList.remove("open");
+  ).classList.remove(
+   "open"
+  );
+
 
   render();
+
  }
 );
 
+
+/* RESET */
 
 document.getElementById(
  "resetSetup"
@@ -1381,17 +2431,25 @@ document.getElementById(
 
   profile=
    JSON.parse(
-    JSON.stringify(DEFAULT_PROFILE)
+    JSON.stringify(
+     DEFAULT_PROFILE
+    )
    );
 
+
   saveProfile();
+
   populateSetup();
+
   render();
+
  }
 );
 
 
-/* SPOT TABS */
+/* ==========================================
+   SPOT TABS
+========================================== */
 
 document.querySelectorAll(
  ".tab"
@@ -1404,71 +2462,149 @@ document.querySelectorAll(
    selectedSpot=
     button.dataset.spot;
 
+
    document.querySelectorAll(
     ".tab"
    ).forEach(
-    x=>x.classList.remove("active")
+    item=>
+     item.classList.remove(
+      "active"
+     )
    );
 
-   button.classList.add("active");
+
+   button.classList.add(
+    "active"
+   );
+
 
    render();
+
   }
  );
+
 });
 
 
-/* LOAD */
+/* ==========================================
+   LOAD EVERYTHING
+========================================== */
 
 async function load(){
 
  try{
 
+
+  const results=
+   await Promise.all([
+
+
+    Promise.all(
+
+     spots.map(
+      async spot=>{
+
+
+       const [
+        weather,
+        marine
+       ]=
+        await Promise.all([
+
+         getWeather(spot),
+
+         getMarine(spot)
+
+        ]);
+
+
+       return {
+
+        spot:spot,
+
+        weather:weather,
+
+        marine:marine,
+
+        hours:
+         combineHours(
+          weather,
+          marine
+         )
+
+       };
+
+      }
+     )
+
+    ),
+
+
+    getPooleTides()
+
+   ]);
+
+
   latestData=
-   await Promise.all(
+   results[0];
 
-    spots.map(async spot=>{
 
-     const [weather,marine]=
-      await Promise.all([
-       getWeather(spot),
-       getMarine(spot)
-      ]);
+  latestTides=
+   results[1];
 
-     return {
-      spot,
-      weather,
-      marine,
-      hours:futureHours(weather)
-     };
-    })
-
-   );
 
   render();
+
 
   document.getElementById(
    "updated"
   ).textContent=
-   "Updated "+hhmm(new Date());
+   "Updated "+
+   hhmm(
+    new Date()
+   );
+
 
  }catch(error){
 
+
   console.error(error);
+
 
   document.getElementById(
    "heroTitle"
   ).textContent=
    "Forecast unavailable";
 
+
   document.getElementById(
    "heroText"
   ).textContent=
    "Try refreshing the page.";
+
+
+  document.getElementById(
+   "heroBadge"
+  ).className=
+   "badge no";
+
+
+  document.getElementById(
+   "heroBadge"
+  ).textContent=
+   "ERROR";
+
  }
+
 }
 
+
+/* FIRST LOAD */
+
 load();
+
+
+/* REFRESH EVERY 10 MINUTES */
 
 setInterval(
  load,
